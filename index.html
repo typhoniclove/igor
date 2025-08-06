@@ -1,0 +1,1616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DEVIOUSLY GIGGLING</title>
+  <audio id="laughSound" src="https://file.garden/Z9LL5mKyLkNH164u/site/glaggleland-chant.mp3"></audio>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/x-icon" href="https://file.garden/Z9LL5mKyLkNH164u/site/favicon.ico">
+</head>
+<body>
+
+  <header>
+    <h1>deviousGiggler</h1>
+  </header>
+
+  <div class="wrapper">
+    <main>
+      <div class="container left">
+        <h2><center>About Me</center></h2>
+        <nav>
+          <ul>
+            <li><button type="button" data-target="home">Home</button></li>
+            <li><button type="button" data-target="about">About Me</button></li>
+            <li><button type="button" data-target="interests">Interests</button></li>
+            <li><button type="button" data-target="art">Art</button></li>
+            <li><button type="button" data-target="friends">Friends</button></li>
+          </ul>
+        </nav>
+      </div>
+
+<div class="container middle" id="content">
+  <h1>WELCOME!</h1>
+
+  <div class="top-content">
+    <div class="text-block">
+      <h3>WELCOME TO THE INTERNET!!!
+          <br>WELCOME TO MY WEBPAGE!!!
+      <br>THE BEST PLACE THAT YOU'LL SEE!!!
+      <br>THE BEST WEBSITE IN THE UNIVERSE!!!
+      <br>THX 4 STOPPING BY 2 VISIT, U R A LEGEND!!!</h3>
+    </div>
+    <div class="image-block">
+      <img src="https://file.garden/Z9LL5mKyLkNH164u/site/jade.gif" alt="Jade GIF" />
+      <br>
+    </div>
+  </div>
+  <p>Welcome to my personal corner of the web! :D Here, you can check out my personal content, 
+    and many other cool things stored within here! Anyways, have fun looking around! Be sure
+     to sign my Guestbook once you've finished looking! :DDD
+  </p>
+</div>
+
+      <div class="container right">
+        <h2><center>Extras</center></h2>
+        <nav>
+          <ul>
+            <li><button type="button" data-target="home">Home</button></li>
+            <li><button type="button" data-target="shrines">Shrines</button></li>
+            <li><button type="button" data-target="collection">Collection</button></li>
+            <li><button type="button" data-target="links">Links</button></li>
+            <li><button type="button" data-target="misc">Misc</button></li>
+          </ul>
+        </nav>
+      </div>
+    </main>
+
+<footer>
+  <div class="footer-container left">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/site/c4.png" alt="Jade GIF" />
+  </div>
+  <div class="footer-container middle">
+    <div id="music-player">
+      <div id="nowPlaying-scroll">
+        <p><strong>Now Playing:</strong> <span id="nowPlaying">None</span></p>
+      </div>
+      <div class="player-controls">
+        <audio id="player" controls></audio>
+        <div class="music-buttons">
+          <button id="prevBtn"><</button>
+          <button id="nextBtn">></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-container right">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/site/c2.png" alt="Jade GIF" />
+  </div>
+</footer>
+
+
+
+
+
+<script>
+
+document.getElementById("content").addEventListener("click", (e) => {
+  if (e.target.classList.contains("art-year")) {
+    const header = e.target;
+    const year = header.getAttribute("data-year");
+    const content = document.getElementById("art-" + year);
+    if (!content) return;
+
+    if (content.style.display === "none") {
+      content.style.display = "block";
+      header.textContent = year + " ▲";
+    } else {
+      content.style.display = "none";
+      header.textContent = year + " ▼";
+    }
+  }
+});
+
+
+
+document.querySelectorAll(".art-year").forEach(header => {
+  header.addEventListener("click", () => {
+    const year = header.getAttribute("data-year");
+    const content = document.getElementById("art-" + year);
+    if (!content) return;
+
+    if (content.style.display === "none") {
+      content.style.display = "block";
+      header.textContent = year + " ▲";
+    } else {
+      content.style.display = "none";
+      header.textContent = year + " ▼";
+    }
+  });
+});
+
+// === Music Player Setup ===
+  const tracks = [
+      {
+      title: "datfootdive - why me",
+      src: "https://file.garden/Z9LL5mKyLkNH164u/site/why-me.mp3"
+    }
+    ,
+    {
+      title: "Tekken 4 - Kitsch",
+      src: "https://file.garden/Z9LL5mKyLkNH164u/site/Tekken%204%20OST%20-%20Kitsch%20(Beach%20Stage).mp3"
+    }
+    ,
+    {
+      title: "Bomberman Hero - Redial",
+      src: "https://file.garden/Z9LL5mKyLkNH164u/site/Bomberman%20Hero_%20Redial%20HD.mp3"
+    }
+    ,
+    {
+     title: "Accelio - Midnight Noir",
+      src: "https://file.garden/Z9LL5mKyLkNH164u/site/Midnight%20Noir.mp3"
+    }
+    ,
+    {
+      title: "Vagabounce - Homestuck",
+      src: "https://file.garden/Z9LL5mKyLkNH164u/site/Vagabounce%20-%20Homestuck%20%5BVol.%202%5D.mp3"
+    }
+    ,
+    {
+      title: "Gardener - Homestuck",
+      src: "https://file.garden/Z9LL5mKyLkNH164u/site/Homestuck%20-%20Gardener.mp3"
+    }
+    ,
+    {
+      title: "SpongeBob SuperSponge - Industrial Fields and Oil Rig",
+      src: "https://file.garden/Z9LL5mKyLkNH164u/site/SpongeBob%20SuperSponge%20OST%20Remastered_%20Industrial%20Fields%20and%20Oil%20Rig.mp3"
+    }
+    ,
+    {
+      title: "Darkwood Dub - Dnevnik",
+      src: "https://file.garden/Z9LL5mKyLkNH164u/site/Darkwood%20Dub%20-%20Dnevnik.mp3"
+    }
+    ,
+    {
+      title: "Darkwood Dub - Šećer",
+      src: "https://file.garden/Z9LL5mKyLkNH164u/site/Darkwood%20Dub%20-%20Secer.mp3"
+    }
+    ,
+    {
+      title: "datfootdive - harvest the hurt",
+      src: "https://file.garden/Z9LL5mKyLkNH164u/site/harvest-the-hurt.mp3"
+    }
+    ,
+    {
+      title: "Nintendo DSi Music - Camera (Album)",
+      src: "https://file.garden/Z9LL5mKyLkNH164u/site/Nintendo%20DSi%20Music%20-%20Camera%20(Album).mp3"
+    }
+    ,
+    {
+      title: "Tovatronica - Hub World",
+      src: "https://file.garden/Z9LL5mKyLkNH164u/site/Tovatronica%20-%20Hub%20World.mp3"
+    }
+    ,
+    {
+      title: "Laura Shigihara - Zombies On Your Lawn",
+      src: "https://file.garden/Z9LL5mKyLkNH164u/site/Zombies%20On%20Your%20Lawn%20(Instrumental)%20-%20Plants%20Vs.%20Zombies.mp3"
+    }
+    ,
+    {
+      title: "Robot 64 - Hub World",
+      src: "https://file.garden/Z9LL5mKyLkNH164u/site/Hub%20World.mp3"
+    }
+    ,
+    {
+      title: "Robot 64 - Enjoy Your Stay",
+      src: "https://file.garden/Z9LL5mKyLkNH164u/site/Robot%2064%20OST%20-%20Enjoy%20Your%20Stay.mp3"
+    }
+    ,
+    {
+      title: "PilotRedSun - Fat Cat",
+      src: "https://file.garden/Z9LL5mKyLkNH164u/site/Pilotredsun-%20Fat%20Cat.mp3"
+    }
+    ,
+    {
+      title: "Lease - Takeshi Abo",
+      src: "https://file.garden/Z9LL5mKyLkNH164u/site/Takeshi%20Abo%20-%20Lease%20(spongebob%20style).mp3"
+    }
+];
+
+let currentTrackIndex = 0;
+const player = document.getElementById("player");
+const nowPlaying = document.getElementById("nowPlaying");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+// Create click sound
+const bubbleSound = new Audio("https://file.garden/Z9LL5mKyLkNH164u/site/bubble.ogg");
+
+function loadTrack(index) {
+  const track = tracks[index];
+  player.src = track.src;
+  nowPlaying.textContent = track.title;
+  player.play();
+}
+
+player.addEventListener("ended", () => {
+  currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
+  loadTrack(currentTrackIndex);
+});
+
+prevBtn.addEventListener("click", () => {
+  bubbleSound.currentTime = 0;
+  bubbleSound.play();
+  currentTrackIndex = (currentTrackIndex - 1 + tracks.length) % tracks.length;
+  loadTrack(currentTrackIndex);
+});
+
+nextBtn.addEventListener("click", () => {
+  bubbleSound.currentTime = 0;
+  bubbleSound.play();
+  currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
+  loadTrack(currentTrackIndex);
+});
+
+
+// === Header Hover Sound ===
+const header = document.querySelector("header h1");
+const sound = document.getElementById("laughSound");
+let isHovering = false;
+
+header.addEventListener("mouseenter", () => {
+  isHovering = true;
+  sound.currentTime = 0;
+  sound.play();
+});
+
+header.addEventListener("mouseleave", () => {
+  isHovering = false;
+  sound.pause();
+  sound.currentTime = 0;
+});
+
+sound.addEventListener("ended", () => {
+  if (isHovering) {
+    sound.currentTime = 0;
+    sound.play();
+  }
+});
+
+// === Page Switching + Click Sound ===
+document.addEventListener("DOMContentLoaded", () => {
+
+    
+  loadTrack(currentTrackIndex); // Start music
+
+  
+
+  const content = document.getElementById("content");
+  const clickSound = new Audio("https://file.garden/Z9LL5mKyLkNH164u/site/bubble.ogg");
+
+      const welcomeContent = `
+      <h1>WELCOME!</h1>
+      <div class="top-content">
+        <div class="text-block">
+          <h3>WELCOME TO THE INTERNET!!!
+          <br>WELCOME TO MY WEBPAGE!!!
+          <br>THE BEST PLACE THAT YOU'LL SEE!!!
+          <br>THE BEST WEBSITE IN THE UNIVERSE!!!
+          <br>THX 4 STOPPING BY 2 VISIT, U R A LEGEND!!!</h3>
+        </div>
+        <div class="image-block">
+          <img src="https://file.garden/Z9LL5mKyLkNH164u/site/jade.gif" alt="Jade GIF" /><br>
+        </div>
+      </div>
+      <p>Welcome to my personal corner of the web! :D Here, you can check out my personal content, 
+        and many other cool things stored within here! Anyways, have fun looking around! Be sure
+         to sign my Guestbook once you've finished looking! :DDD</p>
+    `;
+
+const pages = {
+  about: `
+  <h2>About Me</h2>
+  <div class="about-content">
+    <div class="image-block">
+      <img src="https://files.catbox.moe/9tyjfh.gif" alt="Funny GIF" />
+    </div>
+    <div class="text-block">
+      <p>My name is Ena, as some of you may already know,
+         but I am also known by my full government assigned names deviousGiggler and yugiohlover3.</p>
+    </div>
+  </div>
+  <br>
+
+  <p>I am someone who draws and codes for fun. I like to create things that
+  bring me joy! I really love music, and I'm always open up for music recommendations! :D</p><br>
+  
+  <p>My angel number is 777, my favorite juice flavors are pineapple and elderberry flower,
+    my favorite animals are cats, snails (both land & aquatic) and Japanese spider crabs,
+    I love playing instruments like my flute and synthesizer, I enjoy whimsy such as pirates,
+    wizards, fairies, mermaids, etc...</p><br>
+  
+  <p>I am also a big fan of retro and old-school stuff! Whether it's music, games, or any sort 
+  of media!</p>
+`,
+
+
+      interests: `
+  <h2>Interests</h2>
+  <br>
+  <p>Game genres:<br>
+    <u>Story Driven Games</u>, Puzzles, Platformers, Exploration, Visual Novels, <u>RPGMaker (including horror)</u>,
+    Psychological Horror, <u>Old Flash games</u>, <u>Metroidvania</u>, <u>Rhythm Games</u>
+  </p><br>
+
+  <p>Music genres:</p>
+  <p><u>Eurobeat</u>, <u>Eurodance</u>, <u>Bubblegum Dance</u>, Vaporfunk, Synthwave, Acid Jazz, Jazzwave, <u>Jungle</u>,
+    <u>Drum n' Bass</u> (Liquid, Drumfunk, Hardstep), Trance, <u>Dubstep</u>, Breakcore, Chiptune, 8-bit, 16-bit,
+    Ambient, Classical, <u>Impressionist</u>, Bossa Nova, Alternative Rock, <u>Post-Punk</u>, Indie Rock
+  </p><br>
+
+  <div class="music-artists-content">
+    <div class="music-text">
+      <p>Music artists:
+        <br>
+        <u>Mr Bungle</u>, <u>The Garden</u>, Block Out, E-PLAY, <u>Darkwood Dub</u>, <u>Ektarina Velika</u>,
+        Cage The Elephant, Emezie Okorafor, Crush 40, <u>Two Door Cinema Club</u>, tv room, Kero Kero Bonito, 
+        Jack Stauber, <u>Lemon Demon</u>, Graham Kartna, Waterflame, <u>PilotRedSun</u>, PengoSolvent, LTJ Bukem,
+        <u>Go 2</u>, Ace (Eurobeat), Dave Rodgers
+      </p>
+    </div>
+    <div class="music-image">
+      <img src="https://files.catbox.moe/qmt09j.gif" alt="Dancing GIF" />
+    </div>
+  </div>
+`,
+
+    art: `
+      <h2>Art</h2>
+      <br>
+      <p>Here you can check out all of my landscape drawings! I think I improved a lot over the years, but my art got less colorful and has
+        more of an 'earthy' color palette nowadays. But I'll probably try to to make vibrant colored art again sometime soon!</p>
+<br>
+        <p>You can also check out my pixel art! There's not a lot, and it's mostly just PC-98, but I don't remember the dates of when I made these, so I
+            made a separate section for them. :)</p>
+
+            <div>
+        <h3 class="art-year" data-year="Pixel Art" style="cursor:pointer; user-select:none;">
+          Pixel Art ▼
+        </h3>
+        <div id="art-Pixel Art" class="art-content" style="display:none; padding-left: 20px;">
+          <img src="https://files.catbox.moe/r63yhy.gif" width="600"
+          <br>
+          <br>
+          <p>My first attempt at PC-98! I took a lot of inspo from other games for the UI. There are some things I could've done better, but I still think it turned out amazing!</p>
+          <br>
+          <br>
+          <img src="https://files.catbox.moe/ohpqj3.gif" width="600"
+          <br>
+          <br>
+          <p>I don't really like how I drew myself here lol... Also most of the stuff was traced because I was just messing around on Microsoft Paint out of boredom. :P</p>
+          <br>
+          <br>
+          <img src="https://files.catbox.moe/cj8xjt.gif" width="650"
+          <br>
+          <br>
+          <p>My friend group held a Secret Santa, which is how this drawing came to be! I love it so much!!! I'm really happy with how it turned out. :)</p>
+          <br>
+          <br>
+          <img src="https://files.catbox.moe/o9658w.gif" width="500"
+          <br>
+          <br>
+          <p>This was just a small test thingy to preview and envision how my own Yume Nikki fangame would look like! Maybe one day it will come true...</p>
+          <br>
+          <br>
+           <img src="https://files.catbox.moe/aroo5g.png" width="440"
+          <br>
+          <br>
+          <p>I drew this with 2kki paint! The reason I displayed such a simple drawing here is because I had to walk over this huge canvas for 30 minutes straight to color each pixel... T_T</p>
+          <br>
+          <br>
+        </div>
+      </div>
+
+
+      <div>
+        <h3 class="art-year" data-year="2025" style="cursor:pointer; user-select:none;">
+          2025 ▼
+        </h3>
+        <div id="art-2025" class="art-content" style="display:none; padding-left: 20px;">
+          <img src="https://file.garden/Z9LL5mKyLkNH164u/ART/21.png" width="550"
+          <br>
+          <br>
+          <p>I was trying to bite more than I could chew and just gave up because it was WAY too complicated for my skills!</p>
+          <br>
+          <br>
+          <img src="https://file.garden/Z9LL5mKyLkNH164u/ART/22.png" width="550"
+          <br>
+          <br>
+          <p>Another redraw from Sky! I really am proud of how it turned out, but drawing those clouds was such a pain... Somehow even worse than on Microsoft Paint.</p>
+          <br>
+          <br>
+          <img src="https://file.garden/Z9LL5mKyLkNH164u/ART/23.png" width="550"
+          <br>
+          <br>
+          <p>I made fanart for this really wonderful game!!! The music and just the entire location itself is really beautiful! (Collective Unconscious - Wisteria Manor)</p>
+          <br>
+          <br>
+          <img src="https://file.garden/Z9LL5mKyLkNH164u/ART/24.png" width="450"
+          <br>
+          <br>
+          <p>I guess I could say this one is a better version of the 5th drawing here! I didn't fully finish this piece, but I'm happy with how it turned out.</p>
+          <br>
+          <br>
+          <img src="https://file.garden/Z9LL5mKyLkNH164u/ART/25.png" width="350"
+          <br>
+          <br>
+          <p>I know I've done it plenty of times in my art, but I wanted to practice drawing clouds a little more; so this is just nothing more than a small sketch!</p>
+          <br>
+          <br>
+          <img src="https://file.garden/Z9LL5mKyLkNH164u/ART/26.png" width="250"
+          <br>
+          <br>
+          <p>Honestly, I have no idea what I was trying to go for with this... BUT, it does look cool!</p>
+          <br>
+          <br>
+          <img src="https://file.garden/Z9LL5mKyLkNH164u/ART/27.png" width="570"
+          <br>
+          <br>
+          <p>This lovely sight appeared in one of my recent naps, so I thought I'd draw it! It felt amazing to be there... I wish I could go back...</p>
+          <br>
+          <br>
+          <img src="https://file.garden/Z9LL5mKyLkNH164u/ART/28.png" width="570"
+          <br>
+          <br>
+          <p>I felt like drawing more vast plains, so I did this! It looks okay... I'm not sure about the clouds, but whatever. I'll probably do another one next time!</p>
+          <br>
+          <br>
+          <img src="https://file.garden/Z9LL5mKyLkNH164u/ART/30.png" width="500"
+          <br>
+          <br>
+          <p>I revisited an old childhood game that I totally forgot about... It's called Tower of Heaven, and it's quite short, but I remember the soundtrack being beautiful!</p>
+          <br>
+          <br>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="art-year" data-year="2024" style="cursor:pointer; user-select:none;">
+          2024 ▼
+        </h3>
+        <div id="art-2024" class="art-content" style="display:none; padding-left: 20px;">
+          <img src="https://file.garden/Z9LL5mKyLkNH164u/ART/18.png" width="540"
+          <br>
+          <br>
+          <p>I had an art block for 10 months at this point, and seeing the snow fall out of my window really inspired me to make this... one of my favorites!</p>
+          <br>
+          <br>
+          <img src="https://file.garden/Z9LL5mKyLkNH164u/ART/19.png" width="540"
+          <br>
+          <br>
+          <p>I love how smooth this one turned out to be! I wanted to try practicing drawing clouds more with this one. This is supposed to be fanart for the game called Sky: COTL!</p>
+          <br>
+          <br>
+          <img src="https://file.garden/Z9LL5mKyLkNH164u/ART/20.png" width="540"
+          <br>
+          <br>
+          <p>One of my last drawings from 2024, and it's another unfinished one... I was tracing over a wallpaper I found online because I thought it looked really fun to draw...</p>
+          <br>
+          <br>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="art-year" data-year="2023" style="cursor:pointer; user-select:none;">
+          2023 ▼
+        </h3>
+        <div id="art-2023" class="art-content" style="display:none; padding-left: 20px;">
+          <!-- Add 2023 images here -->
+          <img src="https://file.garden/Z9LL5mKyLkNH164u/ART/15.png" width="510"
+          <br>
+          <br>
+          <p>I drew one of my comfort places in my favorite game! I remember not fully finishing this piece because I wasn't good at drawing clouds back then... (Yume 2kki - City Limits)</p>
+          <br>
+          <br>
+          <img src="https://file.garden/Z9LL5mKyLkNH164u/ART/16.png" width="510"
+          <br>
+          <br>
+          <p>This was a recreation of my 2022 drawing with the 2 trees in-between the moon. I used a different program to make this, but it feels like the soul and charm was sucked out of it, so I don't really like it that much.</p>
+          <br>
+          <br>
+          <img src="https://file.garden/Z9LL5mKyLkNH164u/ART/17.jpg" width="510"
+          <br>
+          <br>
+          <p>Another unfinished piece I made during class. I remember tracing over a picture of a desert, but I could've done a better job honestly...</p>
+          <br>
+          <br>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="art-year" data-year="2022" style="cursor:pointer; user-select:none;">
+          2022 ▼
+        </h3>
+        <div id="art-2022" class="art-content" style="display:none; padding-left: 20px;">
+          <!-- Add 2022 images here -->
+          <img src="https://file.garden/Z9LL5mKyLkNH164u/ART/7.png" width="490"
+          <br>
+          <br>
+          <p>I got heavily influenced by the music I was listening to while drawing this...! It was such a moving piece to me, even if it's a simple one. (Yume 2kki - Depths)</p>
+          <br>
+          <br>
+          <img src="https://file.garden/Z9LL5mKyLkNH164u/ART/8.png" width="490"
+          <br>
+          <br>
+          <p>I think this might be one of my top favorite landscapes I've made, it was also made based around music I was listening to! (Yume 2kki - Midnight Lake)</p>
+          <br>
+          <br>
+          <img src="https://file.garden/Z9LL5mKyLkNH164u/ART/9.png" width="560"
+          <br>
+          <br>
+          <p>Same thing as the last 2, but I think I could've done much better on this one... I can see the vision though! :'D</p>
+          <br>
+          <br>
+          <img src="https://file.garden/Z9LL5mKyLkNH164u/ART/10.png" width="520"
+          <br>
+          <br>
+          <p>I remember at the time when I made this, I really didn't like how it was turning out, so I left it unfinished. But now that I look back, it looks pretty great!</p>
+          <br>
+          <br>
+          <img src="https://file.garden/Z9LL5mKyLkNH164u/ART/11.png" width="520"
+          <br>
+          <br>
+          <p>I didn't even bother finishing this one because it was just turning out more and more messy the more I tried fixing it... :')</p>
+          <br>
+          <br>
+          <img src="https://file.garden/Z9LL5mKyLkNH164u/ART/12.png" width="490"
+          <br>
+          <br>
+          <p>I doodled this while I was listening to Giygas' theme... LOL...</p>
+          <br>
+          <br>
+          <img src="https://file.garden/Z9LL5mKyLkNH164u/ART/13.png" width="490"
+          <br>
+          <br>
+          <p>This is another one of my favorites, because I put so much work and effort into it, and I still look back to it! :)</p>
+          <br>
+          <br>
+          <img src="https://file.garden/Z9LL5mKyLkNH164u/ART/14.png" width="490"
+          <br>
+          <br>
+          <p>I was completely MESMERIZED when I saw this in a game I was playing. This specific drawing even managed to make it in the game itself as a wallpaper! :D (Yume 2kki - Golden Sky Bridge)</p>
+          <br>
+          <br>
+          <img src="https://file.garden/Z9LL5mKyLkNH164u/ART/technically%2015.png" width="490"
+          <br>
+          <br>
+          <p>Another fanart for the same game yet again... :P I made this because I thought the place was underrated and beautiful! Just the music itself is so powerful! (Yume 2kki - Red Rock Caves)</p>
+          <br>
+          <br>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="art-year" data-year="2021" style="cursor:pointer; user-select:none;">
+          2021 ▼
+        </h3>
+        <div id="art-2021" class="art-content" style="display:none; padding-left: 20px;">
+          <!-- Add 2021 images here -->
+          <img src="https://file.garden/Z9LL5mKyLkNH164u/ART/4.jpg" width="300"
+          <br>
+          <br>
+          <p>I decided to switch to digital. As much as I loved my traditional art, it was really a pain in the ass sometimes. Anyways, this looks pretty... bad, but okay for a starting point!</p>
+          <br>
+          <br>
+          <img src="https://file.garden/Z9LL5mKyLkNH164u/ART/5.png" width="350"
+          <br>
+          <br>
+          <p>Here I was trying to test and mess around with brushes in Microsoft Paint. I still really like this drawing to this day!</p>
+          <br>
+          <br>
+          <img src="https://file.garden/Z9LL5mKyLkNH164u/ART/6.png" width="280"
+          <br>
+          <br>
+          <p>I made this one with a friend. :-) She helped a lot in making the drawing look more polished!</p>
+          <br>
+          <br>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="art-year" data-year="2020" style="cursor:pointer; user-select:none;">
+          2020 ▼
+        </h3>
+        <div id="art-2020" class="art-content" style="display:none; padding-left: 20px;">
+          <!-- Add 2020 images here -->
+          <img src="https://file.garden/Z9LL5mKyLkNH164u/ART/2.png" width="500"
+          <br>
+          <br>
+          <p>One of my first ever landscape drawings, and I'm still proud of it! I vividly remember my teacher complimenting it because I made this during class... :'D</p>
+          <br>
+          <br>
+          <img src="https://file.garden/Z9LL5mKyLkNH164u/ART/1.png" width="300""
+          <br>
+          <br>
+          <p>I painted this in an art class not thinking much of it back then, but now that I look back, I really like how I drew that mountain!</p>
+          <br>
+          <br>
+          <img src="https://file.garden/Z9LL5mKyLkNH164u/ART/3.png" width="300"
+          <br>
+          <br>
+          <p>I remember hating this one, but now that I look back, it looks pretty interesting! Although, I'm pretty sure I used a reference for it...</p>
+        </div>
+      </div>
+    `,
+    
+
+    friends: `
+          <h2>Friends</h2>
+          <br>
+<div class="friends-center-wrapper">
+  <p class="friends-center-text">Check out my friend's lovely websites!</p>
+</div>
+<p style="color: black; font-weight: bold;">───── ⋆⋅☆⋅⋆ ─────</p>
+     <div class="friends-links">
+<h1><a href="https://zethyer.carrd.co/" style="color: #a148ff;" class="friend-link" target="_blank" rel="noopener noreferrer">Zethyer</a></h1>
+<div class="friends-center-wrapper">
+  <p class="friends-center-text">If a constellation was a website, this would be it! :D</p>
+</div>
+<h1><a href="https://leassummer.carrd.co/#about" style="color: #ffaec9;" class="friend-link" target="_blank" rel="noopener noreferrer">Leanni</a></h1>
+  <p class="friends-center-text">A website perfectly acustomed to summmer! Totally not made by me! :D</p>
+<h1><a href="https://youtu.be/9KsndmorEWQ?si=y_evRkbLHa_fqlC3" style="color: #88ffd5;" class="friend-link" target="_blank" rel="noopener noreferrer">Minta</a></h1>
+  <p class="friends-center-text">Probably the best website ever, right next to mine. :P</p>
+<h1><a href="https://toyhou.se/WindwheelAster" style="color: #243b4f;" class="friend-link" target="_blank" rel="noopener noreferrer">Aster</a></h1>
+  <p class="friends-center-text">Aster does commissions, so be sure to check him out!</p>
+<h1><a href="https://doppiostaples.straw.page/" style="color: #A25E5E;" class="friend-link" target="_blank" rel="noopener noreferrer">Nini</a></h1>
+  <p class="friends-center-text">The devil's website... >:)</p>
+<h1><a href="https://riqochet.nekoweb.org/" style="color: #fffff;" class="friend-link" target="_blank" rel="noopener noreferrer">Riqo</a></h1>
+  <p class="friends-center-text">An angel's website... 0:)</p>
+<h1><a href="https://venrain.neocities.org/" style="color: #ffe8c5;" class="friend-link" target="_blank" rel="noopener noreferrer">Ven</a></h1>
+  <p class="friends-center-text">Really cool and very purple, despite the name color! :P</p>
+<h1><a href="https://souromo.carrd.co/" style="color: #ff85b8;" class="friend-link" target="_blank" rel="noopener noreferrer">Romo</a></h1>
+  <p class="friends-center-text">Super cutesy website that reminds me of old girl games websites!</p>
+</div>
+<br>
+<p style="color: black; font-weight: bold;">───── ⋆⋅☆⋅⋆ ─────</p>
+    `,
+
+    
+    shrines: `
+      <h2>Shrines</h2>
+      <br>
+      <p>I have a lot of shrines, but they're all currently under construction because they were all made with Carrd, so be sure to check
+        back here soon once I remake them! :)</p>
+    `,
+
+collection: `
+<h2>Collection</h2>
+<br>
+<div>
+
+<h3 class="art-year" data-year="Cute Pixel Art Scenery" style="cursor:pointer; user-select:none;">
+          Cute Pixel Art Scenery ▼
+        </h3>
+        <div id="art-Cute Pixel Art Scenery" class="art-content" style="display:none;">
+<p style="margin-top:10px;">Red</p>
+    <p style="color: black; font-weight: bold;">───── ⋆⋅☆⋅⋆ ─────</p>
+  <div class="stamps-collection">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/red1.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/red3.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/red4.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/red5.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/red6.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/red7.gif" alt="pix">
+  </div>
+<br>
+<br>
+  <p style="margin-top:20px;">Orange</p>
+    <p style="color: black; font-weight: bold;">───── ⋆⋅☆⋅⋆ ─────</p>
+  <div class="stamps-collection">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/orange1.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/orange2.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/orange3.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/orange4.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/orange5.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/orange6.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/orange7.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/orange8.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/orange9.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/orange10.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/orange11.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/orange12.gif" alt="pix">
+</div>
+<br>
+<br>
+    <p style="margin-top:20px;">Yellow</p>
+    <p style="color: black; font-weight: bold;">───── ⋆⋅☆⋅⋆ ─────</p>
+  <div class="stamps-collection">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/yellow1.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/yellow2.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/yellow3.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/yellow4.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/yellow5.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/yellow6.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/yellow7.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/yellow8.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/yellow9.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/yellow10.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/yellow11.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/yellow12.gif" alt="pix">
+  </div>
+<br>
+<br>
+  <p style="margin-top:20px;">Green</p>
+    <p style="color: black; font-weight: bold;">───── ⋆⋅☆⋅⋆ ─────</p>
+  <div class="stamps-collection">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/green.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/green2.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/green3.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/green4.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/green5.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/green6.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/green7.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/green8.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/green9.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/green10.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/green11.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/green12.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/green13.gif" alt="pix">
+    
+</div>
+<br>
+<br>
+    <p style="margin-top:20px;">Blue</p>
+    <p style="color: black; font-weight: bold;">───── ⋆⋅☆⋅⋆ ─────</p>
+  <div class="stamps-collection">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/blue1.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/blue2.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/blue3.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/blue4.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/blue5.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/blue6.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/blue7.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/blue8.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/blue9.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/blue10.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/blue11.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/blue12.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/blue13.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/blue14.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/blue15.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/blue16.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/blue17.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/blue18.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/blue19.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/blue20.gif" alt="pix">
+  </div>
+  <br>
+<br>
+  <p style="margin-top:20px;">Purple</p>
+    <p style="color: black; font-weight: bold;">───── ⋆⋅☆⋅⋆ ─────</p>
+  <div class="stamps-collection">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/purple1.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/purple2.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/purple3.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/purple4.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/purple5.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/purple6.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/purple7.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/purple8.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/purple9.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/purple10.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/purple11.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/purple12.gif" alt="pix">
+</div>
+<br>
+<br>
+  <p style="margin-top:20px;">Pink</p>
+    <p style="color: black; font-weight: bold;">───── ⋆⋅☆⋅⋆ ─────</p>
+  <div class="stamps-collection">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/pink1.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/pink2.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/pink3.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/pink4.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/pink5.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/pink6.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/pink7.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/pink8.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/pink9.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/pink10.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/pink11.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/pink12.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/pink13.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/pink14.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/pink15.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/pink16.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/pink17.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/pink18.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/pink19.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/pink20.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/pink21.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/pink22.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/pink23.gif" alt="pix">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/pixel%20scenery/pink25.gif" alt="pix">
+</div>
+        </div>
+  
+<br>
+
+        <h3 class="art-year" data-year="Stamps" style="cursor:pointer; user-select:none;">
+          Stamps ▼
+        </h3>
+        <div id="art-Stamps" class="art-content" style="display:none; padding-left: 20px; padding-right: 20px">
+  
+            <p style="margin-top:10px;">Art</p>
+            <p style="color: black; font-weight: bold;">───── ⋆⋅☆⋅⋆ ─────</p>
+  <div class="stamps-collection">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/stamp2/art1.png" alt="mspaint">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/stamp2/art5.png" alt="mspaint">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/stamp2/art6.gif" alt="mspaint">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/stamp2/art7.jpg" alt="mspaint">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/stamp2/art2.png" alt="paintnet">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/stamp2/art4.png" alt="mouse">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/stamp2/ART9.png" alt="saturday">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/stamp2/art8.gif" alt="love drawing">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/stamp2/art10.gif" alt="sakura">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/stamp2/art11.png" alt="color">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/stamp2/art12.jpg" alt="lined">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/stamp2/art13.jpg" alt="math">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/stamp2/art19.png" alt="class">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/stamp2/art20.png" alt="notebook">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/stamp2/art16.png" alt="rather be">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/stamp2/art18.gif" alt="its ok">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/stamp2/art14.png" alt="drawing">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/stamp2/art15.png" alt="medibang">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/stamp2/art3.png" alt="traditional">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/stamp2/pixelart.png" alt="pixel art">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/stamp2/pixelart2.png" alt="pixel2">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/stamp2/fanart.png" alt="fanart">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/stamp2/originalart.png" alt="og">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/stamp2/grafitti.gif" alt="grafitti">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/stamp2/notpopularity.gif" alt="popularity">
+  </div>
+  <br>
+  <br>
+  <p style="margin-top:10px;">Food</p>
+  <p style="color: black; font-weight: bold;">───── ⋆⋅☆⋅⋆ ─────</p>
+  <div class="stamps-collection">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/oreostamp3.png" alt="oreo">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/oreostamp2.png" alt="oreo2">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/oreostamp.gif" alt="oreo3">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/oreostamp4.gif" alt="oreos">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/oreo5.gif" alt="oreolover">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/milk2.png" alt="chmilk">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/milk5.png" alt="chmilk2">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/milk3.jpg" alt="milk">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/milk1.gif" alt="milk2">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/milk6.png" alt="moremilk">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/spaghetti1.gif" alt="spaghetti">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/alfredo.png" alt="alfredo">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/pasta.jpg" alt="pasta">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/mac1.png" alt="mac">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/mac3.png" alt="mac2">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/mac4.png" alt="mac3">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/mac6.png" alt="mac4">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/mac5.jpg" alt="mac5">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/mac7.png" alt="mac6">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/mac8.gif" alt="mac7">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/mac2.png" alt="mac8">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/mac%20to%20my%20cheese.gif" alt="mac9">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/tacos.jpg" alt="tacos">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/mexican.gif" alt="mexican">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/chinese.gif" alt="chinese">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/cheese1.gif" alt="cheese">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/cheese2.png" alt="cheese2">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/wraps.jpg" alt="wraps">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/cheese3.gif" alt="cheese3">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/cheese4.gif" alt="cheese4">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/sandwich.png" alt="sandwich">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/burger.png" alt="burger">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/caseofidea.jpg" alt="case">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/soup1.png" alt="soup">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/soup2.png" alt="soup2">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/sushi1.png" alt="sushi1">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/sushi2.gif" alt="sushi2">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/sushi5.gif" alt="sushi3">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/sushi4.png" alt="sushi4">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/sushi3.png" alt="sushi5">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/cherry1.png" alt="c1">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/cherry2.png" alt="c2">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/cherry4.jpg" alt="c3">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/cherry3.png" alt="c4">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/cherry5.jpg" alt="c5">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/ban1.png" alt="b1">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/ban2.png" alt="b2">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/banana3.png" alt="b3">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/foodphoto.gif" alt="foodphoto">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/ilfood.jpg" alt="i love food">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/cereal.jpg" alt="cer1">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/cereal2.png" alt="cer2">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/cereal3.jpg" alt="cer3">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/brownie.png" alt="br">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/brownie2.png" alt="br2">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/choco.png" alt="choc">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/chocolate2.jpg" alt="choc2">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/chocoalte4.gif" alt="choc3">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/chocolate3.png" alt="choc4">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/choco2.png" alt="choc5">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/food%20stamps/allergy.gif" alt="allergy">
+  </div>
+  <br>
+  <br>
+  <p style="margin-top:10px;">Sailor Moon</p>
+  <p style="color: black; font-weight: bold;">───── ⋆⋅☆⋅⋆ ─────</p>
+  <div class="stamps-collection">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/46.png" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/47.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/48.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/49.jpg" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/50.png" alt="s">
+
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/26.png" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/28.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/27.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/29.png" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/30.png" alt="s">
+
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/31.png" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/33.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/32.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/34.png" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/35.png" alt="s">
+
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/41.png" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/43.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/42.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/44.png" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/45.png" alt="s">
+
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/36.png" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/38.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/37.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/39.png" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/40.png" alt="s">
+
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/71.png" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/72.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/73.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/74.png" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/75.png" alt="s">
+
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/51.png" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/52.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/53.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/54.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/55.png" alt="s">
+
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/56.png" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/57.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/58.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/59.png" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/60.png" alt="s">
+
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/61.png" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/62.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/63.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/64.png" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/65.png" alt="s">
+
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/66.png" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/67.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/68.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/69.png" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/70.png" alt="s">
+    
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/1.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/2.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/3.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/4.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/5.gif" alt="s">
+
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/10.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/6.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/7.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/8.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/9.gif" alt="s">
+
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/11.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/12.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/13.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/14.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/15.gif" alt="s">
+
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/23.jpg" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/24.jpg" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/21.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/25.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/22.png" alt="s">
+
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/89.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/82.png" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/83.png" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/84.png" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/90.gif" alt="s">
+
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/87.png" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/85.png" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/86.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/76.gif" alt="s">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/sailormoon/88.png" alt="s">
+  </div>
+  <br>
+  <br>
+              <p style="margin-top:10px;">Mermaid Melody</p>
+            <p style="color: black; font-weight: bold;">───── ⋆⋅☆⋅⋆ ─────</p>
+  <div class="stamps-collection">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/mermaidstamp/11.gif" alt="mer">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/mermaidstamp/12.gif" alt="mer">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/mermaidstamp/9.png" alt="mer">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/mermaidstamp/13.gif" alt="mer">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/mermaidstamp/15.gif" alt="mer">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/mermaidstamp/1.jpg" alt="mer">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/mermaidstamp/2.jpg" alt="mer">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/mermaidstamp/3.jpg" alt="mer">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/mermaidstamp/4.jpg" alt="mer">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/mermaidstamp/5.jpg" alt="mer">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/mermaidstamp/6.jpg" alt="mer">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/mermaidstamp/7.jpg" alt="mer">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/mermaidstamp/8.jpg" alt="mer">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/mermaidstamp/16.png" alt="mer">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/mermaidstamp/14.gif" alt="mer">
+  </div>
+  <br>
+  <br>
+  <p style="margin-top:10px;">Winx Club</p>
+  <p style="color: black; font-weight: bold;">───── ⋆⋅☆⋅⋆ ─────</p>
+
+  <div class="stamps-collection">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/1.gif" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/2.gif" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/3.gif" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/4.gif" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/5.gif" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/6.gif" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/7.gif" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/9.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/10.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/12.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/13.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/14.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/16.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/17.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/18.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/19.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/20.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/21.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/22.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/23.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/24.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/25.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/26.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/27.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/28.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/29.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/30.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/31.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/32.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/33.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/34.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/35.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/36.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/37.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/38.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/39.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/40.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/41.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/42.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/43.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/44.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/45.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/46.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/47.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/48.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/49.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/50.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/51.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/52.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/53.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/54.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/55.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/56.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/57.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/58.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/59.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/60.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/61.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/62.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/63.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/64.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/65.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/66.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/67.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/68.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/69.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/70.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/71.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/72.jpg" alt="winx">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/winxstamp/73.jpg" alt="winx">
+  </div>
+  <br>
+  <br>
+    <p style="margin-top:20px;">Umineko When They Cry</p>
+    <p style="color: black; font-weight: bold;">───── ⋆⋅☆⋅⋆ ─────</p>
+
+  <div class="stamps-collection">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/umineko%20stamps/2.jpg" alt="umi2">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/umineko%20stamps/3.png" alt="umi3">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/umineko%20stamps/4.png" alt="umi4">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/umineko%20stamps/5.png" alt="umi5">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/umineko%20stamps/6.png" alt="umi6">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/umineko%20stamps/7.png" alt="umi7">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/umineko%20stamps/8.png" alt="umi8">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/umineko%20stamps/1.gif" alt="umi">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/umineko%20stamps/9.png" alt="umi11">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/umineko%20stamps/14.png" alt="umi12">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/umineko%20stamps/10.jpg" alt="umi13">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/umineko%20stamps/11.jpg" alt="umi14">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/umineko%20stamps/12.jpg" alt="umi15">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/umineko%20stamps/13.gif" alt="umi16">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/umineko%20stamps/15.png" alt="umi17">
+  </div>
+<br>
+<br>
+<p style="margin-top:20px;">Yume Nikki fangames</p>
+<p style="color: black; font-weight: bold;">───── ⋆⋅☆⋅⋆ ─────</p>
+
+  <div class="stamps-collection">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/1.png" alt="umi2">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/2.gif" alt="umi3">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/3.png" alt="umi4">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/4.gif" alt="umi5">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/5.png" alt="umi6">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/6.gif" alt="umi7">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/7.png" alt="umi8">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/8.gif" alt="umi">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/9.gif" alt="umi11">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/10.gif" alt="umi12">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/11.png" alt="umi13">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/12.png" alt="umi14">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/13.png" alt="umi15">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/14.gif" alt="umi16">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/15.gif" alt="umi16">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/16.gif" alt="umi17">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/17.gif" alt="umi7">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/18.gif" alt="umi8">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/19.gif" alt="umi">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/20.gif" alt="umi11">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/21.gif" alt="umi12">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/22.gif" alt="umi13">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/23.gif" alt="umi13">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/24.gif" alt="umi14">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/25.png" alt="umi15">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/26.png" alt="umi16">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/27.png" alt="umi17">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/28.png" alt="umi7">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/29.png" alt="umi17">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/30.png" alt="umi8">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/30%20(2).gif" alt="umi">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/40.gif" alt="umi15">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/41.gif" alt="umi12">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/31.png" alt="umi13">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/32.png" alt="umi14">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/33.png" alt="umi16">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/34.png" alt="umi17">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/42.gif" alt="umi7">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/43.gif" alt="umi7">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/44.gif" alt="umi7">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/45.gif" alt="umi7">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/46.gif" alt="umi7">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/47.gif" alt="umi7">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/48.gif" alt="umi7">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/49.gif" alt="umi7">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/50.gif" alt="umi7">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/51.gif" alt="umi7">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/ynfg%20stamp/52.gif" alt="umi7">
+  </div>
+  <br>
+  <br>
+    <p style="margin-top:20px;">Deltarune</p>
+<p style="color: black; font-weight: bold;">───── ⋆⋅☆⋅⋆ ─────</p>
+
+  <div class="stamps-collection">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/1.png" alt="umi2">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/2.png" alt="umi3">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/3.png" alt="umi4">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/4.gif" alt="umi5">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/5.gif" alt="umi6">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/8.gif" alt="umi">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/9.png" alt="umi11">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/10.png" alt="umi12">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/11.png" alt="umi13">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/12.png" alt="umi14">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/13.png" alt="umi15">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/14.jpg" alt="umi16">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/15.gif" alt="umi17">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/16.gif" alt="umi7">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/17.gif" alt="umi8">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/6.png" alt="umi7">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/7.png" alt="umi8">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/18.png" alt="umi">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/19.png" alt="umi11">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/20.jpg" alt="umi12">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/21.jpg" alt="umi13">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/22.jpg" alt="umi14">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/23.jpg" alt="umi15">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/24.jpg" alt="umi16">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/25.jpg" alt="umi17">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/28.gif" alt="umi7">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/jevil%20extra.jpg" alt="umi17">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/29.jpg" alt="umi8">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/30.gif" alt="umi">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/31.png" alt="umi11">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/32.png" alt="umi12">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/33.gif" alt="umi13">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/34.png" alt="umi14">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/35.png" alt="umi15">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/36.png" alt="umi16">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/37.png" alt="umi17">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/38.png" alt="umi7">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/39.png" alt="umi8">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/40.png" alt="umi">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/41.png" alt="umi11">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/42.png" alt="umi12">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/43.png" alt="umi13">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/44.png" alt="umi14">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/45.png" alt="umi15">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/46.png" alt="umi16">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/47.png" alt="umi17">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/48.png" alt="umi14">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/49.png" alt="umi15">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/50.png" alt="umi16">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/deltarune/51.png" alt="umi17">
+  </div>
+  <br>
+  <br>
+      <p style="margin-top:20px;">Homestuck</p>
+<p style="color: black; font-weight: bold;">───── ⋆⋅☆⋅⋆ ─────</p>
+
+  <div class="stamps-collection">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/1.gif" alt="umi2">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/2.gif" alt="umi3">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/3.gif" alt="umi4">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/4.gif" alt="umi5">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/5.gif" alt="umi6">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/6.gif" alt="umi7">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/7.gif" alt="umi8">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/8.gif" alt="umi">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/9.gif" alt="umi11">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/10.gif" alt="umi12">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/11.gif" alt="umi13">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/12.gif" alt="umi14">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/13.gif" alt="umi15">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/14.gif" alt="umi16">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/YAY.gif" alt="umi16">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/15.gif" alt="umi17">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/16.gif" alt="umi7">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/17.gif" alt="umi8">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/18.gif" alt="umi">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/20.png" alt="umi11">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/21.jpg" alt="umi12">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/22.jpg" alt="umi13">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/23.png" alt="umi13">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/24.png" alt="umi14">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/25.png" alt="umi15">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/26.png" alt="umi16">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/27.gif" alt="umi17">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/28.gif" alt="umi7">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/29.gif" alt="umi17">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/30.gif" alt="umi8">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/31.png" alt="umi">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/32.gif" alt="umi11">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/33.gif" alt="umi12">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/34.gif" alt="umi13">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/35.png" alt="umi14">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/36.png" alt="umi15">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/37.png" alt="umi16">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/38.png" alt="umi17">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/39.gif" alt="umi7">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/40.gif" alt="umi8">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/41.gif" alt="umi">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/42.png" alt="umi11">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/43.gif" alt="umi12">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/44.gif" alt="umi13">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/45.gif" alt="umi14">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/46.png" alt="umi15">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/47.gif" alt="umi16">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/48.png" alt="umi17">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/49.png" alt="umi14">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/50.png" alt="umi15">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/51.png" alt="umi16">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/52.gif" alt="umi17">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/53.png" alt="umi2">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/54.gif" alt="umi3">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/55.png" alt="umi4">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/56.png" alt="umi5">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/57.png" alt="umi6">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/58.png" alt="umi7">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/59.png" alt="umi8">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/60.png" alt="umi">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/61.png" alt="umi11">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/62.png" alt="umi12">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/63.gif" alt="umi13">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/64.jpg" alt="umi14">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/65.png" alt="umi15">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/66.png" alt="umi16">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/67.gif" alt="umi17">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/68.png" alt="umi7">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/69.png" alt="umi8">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/70.gif" alt="umi">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/71.jpg" alt="umi11">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/72.jpg" alt="umi12">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/73.jpg" alt="umi13">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/74.jpg" alt="umi14">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/75.jpg" alt="umi15">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/76.jpg" alt="umi16">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/77.jpg" alt="umi17">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/78.png" alt="umi7">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/79.gif" alt="umi17">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/80.gif" alt="umi8">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/83.gif" alt="umi12">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/84.gif" alt="umi13">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/85.gif" alt="umi14">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/86.gif" alt="umi15">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/87.gif" alt="umi16">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/88.gif" alt="umi17">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/89.gif" alt="umi">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/90.gif" alt="umi11">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/91.gif" alt="umi12">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/92.gif" alt="umi13">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/93.gif" alt="umi14">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/94.gif" alt="umi15">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/95.gif" alt="umi16">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/92%20(2).gif" alt="umi15">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/homestuck/96.png" alt="umi16">
+  </div>
+  <br>
+  <br>
+  <p style="margin-top:10px;">More stamps will be added soon! I promise!</p>
+</div>
+
+
+<style>
+.stamps-collection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  max-width: 100%; /* or e.g. 800px to limit width */
+}
+
+.stamps-collection img {
+  height: auto;
+  max-width: 150px; /* optional: cap max size */
+  border: none;
+  display: block;
+}
+</style>
+        </div>
+      </div>
+<br>
+<div>
+        <h3 class="art-year" data-year="Blinkies" style="cursor:pointer; user-select:none;">
+          Blinkies ▼
+        </h3>
+        <div id="art-Blinkies" class="art-content" style="display:none;">
+<p>Work in progress!</p><br>
+        </div>
+      </div>
+      <br>
+
+
+        
+      </div>
+
+`,
+
+    links: `
+<style>
+.friend-link {
+  color: white;
+  text-decoration: none;
+  transition: color 0s ease;
+}
+
+.link-heading {
+  margin-bottom: 0.1em;
+  color: rgb(255, 255, 255);
+  text-shadow:
+    -2px -2px 0 black,
+     2px -2px 0 black,
+    -2px  2px 0 black,
+     2px  2px 0 black,
+    -2px  0   0 black,
+     2px  0   0 black,
+     0   -2px 0 black,
+     0    2px 0 black;
+}
+
+.friend-link:visited {
+  color: white;
+}
+
+.friend-link:hover {
+  color: cyan;
+}
+</style>
+
+<h2>Links</h2>
+<br>
+<div class="links-center-wrapper">
+  <p class="links-center-text">Check out these cool and useful websites!</p>
+</div>
+<p style="color: black; font-weight: bold;">───── ⋆⋅☆⋅⋆ ─────</p>
+<br>
+<p> My guestbook! </p>
+<div class="website-links">
+<h2 class="link-heading"><a href="https://deviousgiggler.atabook.org/" class="friend-link" target="_blank" rel="noopener noreferrer">Guestbook</a></h2>
+</div>
+<br>
+<p style="color: black; font-weight: bold;">───── ⋆⋅☆⋅⋆ ─────</p>
+<p> Art & fun </p>
+<div class="website-links">
+<h2 class="link-heading"><a href="https://dataswamp.org/~john/worlds/" class="friend-link" target="_blank" rel="noopener noreferrer">Living Worlds in HTML5</a></h2>
+<h2 class="link-heading"><a href="https://paint.js.org/" class="friend-link" target="_blank" rel="noopener noreferrer">Paint.js</a></h2>
+<h2 class="link-heading"><a href="https://www.newrafael.com/" class="friend-link" target="_blank" rel="noopener noreferrer">Rafaël Rozendaal</a></h2>
+<h2 class="link-heading"><a href="https://substack.net/" class="friend-link" target="_blank" rel="noopener noreferrer">substack.net</a></h2>
+</div>
+<br>
+<p style="color: black; font-weight: bold;">───── ⋆⋅☆⋅⋆ ─────</p>
+<p> Music & noise </p>
+<div class="website-links">
+<h2 class="link-heading"><a href="https://patatap.com/" class="friend-link" target="_blank" rel="noopener noreferrer">Patatap</a></h2>
+<h2 class="link-heading"><a href="https://everynoise.com/" class="friend-link" target="_blank" rel="noopener noreferrer">Everynoise.com</a></h2>
+<h2 class="link-heading"><a href="https://asoftmurmur.com/" class="friend-link" target="_blank" rel="noopener noreferrer">A Soft Murmur</a></h2>
+<h2 class="link-heading"><a href="https://virtualpiano.net/" class="friend-link" target="_blank" rel="noopener noreferrer">Virtual Piano</a></h2>
+<h2 class="link-heading"><a href="https://plaza.one/" class="friend-link" target="_blank" rel="noopener noreferrer">Nightwave Plaza</a></h2>
+</div>
+<br>
+<p style="color: black; font-weight: bold;">───── ⋆⋅☆⋅⋆ ─────</p>
+<p> Games </p>
+<div class="website-links">
+<h2 class="link-heading"><a href="https://doublespeakgames.com/" class="friend-link" target="_blank" rel="noopener noreferrer">doublespeak games</a></h2>
+<h2 class="link-heading"><a href="https://aidn.jp/" class="friend-link" target="_blank" rel="noopener noreferrer">aidn.jp</a></h2>
+<h2 class="link-heading"><a href="https://ynoproject.net/" class="friend-link" target="_blank" rel="noopener noreferrer">Yume Nikki Online Project</a></h2>
+<h2 class="link-heading"><a href="https://neal.fun/" class="friend-link" target="_blank" rel="noopener noreferrer">Neal.fun</a></h2>
+<h2 class="link-heading"><a href="https://alula.github.io/SpaceCadetPinball/" class="friend-link" target="_blank" rel="noopener noreferrer">3D Pinball Space Cadet</a></h2>
+</div>
+<br>
+<p style="color: black; font-weight: bold;">───── ⋆⋅☆⋅⋆ ─────</p>
+<p>More will be added eventually!</p>
+    `,
+
+    misc: `
+    
+      <h2>Miscellaneous</h2>
+      <br>
+      <p>Link me?</p>
+
+<style>
+  .stamp-box-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* space between the two stamp+box sets */
+    margin-top: 10px;
+  }
+
+  .stamp-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stamp-box img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 8px;
+  }
+
+  .tiny-scroll-box {
+    width: 85px;
+    height: 50px;
+    overflow: auto;
+    padding: 6px;
+    border: 2px solid black;
+    background-color: white;
+    font-size: 12px;
+    line-height: 1.4;
+    border-radius: 6px;
+    text-align: left;
+  }
+</style>
+
+<div class="stamp-box-container">
+  <div class="stamp-box">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/site/ena%20stamp.png" alt="ena stamp" />
+    <div class="tiny-scroll-box">
+      <p>
+  &lt;a href="http://127.0.0.1:5501/index.html" target="_blank"&gt;
+    &lt;img src="https://file.garden/Z9LL5mKyLkNH164u/site/ena%20stamp.png"&gt;
+  &lt;/a&gt;
+</p>
+    </div>
+  </div>
+
+  <div class="stamp-box">
+    <img src="https://file.garden/Z9LL5mKyLkNH164u/site/igor%20stamp.png" alt="igor stamp" />
+    <div class="tiny-scroll-box">
+      <p>
+  &lt;a href="http://127.0.0.1:5501/index.html" target="_blank"&gt;
+    &lt;img src="https://file.garden/Z9LL5mKyLkNH164u/site/igor%20stamp.png"&gt;
+  &lt;/a&gt;
+</p>
+    </div>
+  </div>
+</div>
+      <br>
+<p style="color: black; font-weight: bold;">───── ⋆⋅☆⋅⋆ ─────</p>
+      <p>QnA</p>
+      <br>
+      <p>Q: How was this website made?</p>
+      <p>A: With programming languages HTML, CSS and JavaScript!</p>
+      <br>
+      <p>Q: What program did you use?</p>
+      <p>A: I used VSCode! I have a few years of experience using it,
+      <br>but I've never been the best at coding, so...</p>
+      <br>
+      <p>Q: How long did it take to make this?</p>
+      <p>A: If we don't count the content and just the layout in general,
+      <br>about 2 and a half whole days... ;v;</p>
+      <br>
+      <p>Q: Where did you get all the stamps and blinkies from your collection?</p>
+      <p>A: You can easily find all of these on Deviantart, but they're also common around Tumblr!
+      <br><br>
+      <p>Q: What about the pixel art scenery?</p>
+      <p>A: Just search up something like 'cute pixel art scenery gif' and you'll find them! But the ones I have displayed were 
+      originated in a time so long ago that they have been completely lost...</p>
+      <br>
+      <br>
+      <p>Q: Can you tell me a fun fact?</p>
+      <p>Snails have thousands of teeth and can regenerate part of their eyes if damaged! :)</p>
+      <br>
+      <p style="color: black; font-weight: bold;">───── ⋆⋅☆⋅⋆ ─────</p>
+      <p>Credits</p>
+      <br>
+      <p>Bottom right image created by Rokkyo on DeviantArt!</p>
+      <p>Bottom left image & gifs in 'Home' and 'About Me' are from Homestuck.</p>
+      <p>All of the images/gifs in my collection goes to their rightful owners!</p>
+    `
+  };
+
+  let currentPage = "home";
+
+  document.querySelectorAll("nav button").forEach((button) => {
+    button.addEventListener("click", () => {
+      const target = button.getAttribute("data-target");
+
+      clickSound.currentTime = 0;
+      clickSound.play();
+
+      if (target !== currentPage) {
+        if (target === "home") {
+          content.innerHTML = welcomeContent;
+        } else if (pages[target]) {
+          content.innerHTML = pages[target];
+        } else {
+          content.innerHTML = "<p>Content not found.</p>";
+        }
+        currentPage = target;
+      }
+    });
+  });
+});
+</script>
+
+
+</body>
+</html>
