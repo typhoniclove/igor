@@ -380,7 +380,7 @@ and many other cool things stored within here!</p>
   if I'm not really the best at it. Art just brings me comfort and a sense of calmness whenever I'm in a
   stressful situation, and I'm sure a lot of people can relate. :)
   <br><br>
-  One of my favorite things to do is paint landscapes, especially in Microsoft Paint! I give my respect
+  One of my favorite things to do is paint landscapes and do pixel art, especially in Microsoft Paint! I give my respect
   to anyone who's able to draw in that program. XD If I wasn't so used to it, I'd probably draw in better
   drawing programs instead, but it's just so satisfying to see the end results in a program that's honestly
   kind of difficult to draw in.
@@ -390,15 +390,16 @@ and many other cool things stored within here!</p>
   if it comes to drawing humans, I switch to another program to make things easier for myself.
   <br><br>
   I've also tried Paint 3D recently! It's pretty fun, but trying to make actually detailed things makes the
-  program reaaaallyyyyy laggy!!! T_T Which is why I dropped it quickly. 
-  <br><br>
-  I don't really do traditional art. The only times I've done it was when I'd make doodles and sketches during
-  high school, and now in college as well. I was never the best at it, since my anatomy kind of sucks, but
-  it's fun regardless because it helps me calm my nerves to just make random doodles. :D
+  program reaaaallyyyyy laggy!!! T_T Which is why I dropped it quickly.
   <br><br>
   What I'm planning right now is to learn to shade better, and to draw humans more, because my anatomy is
   actually really terrible. I only know how to do like, atleast 3 poses without using thousands of references
-  and tutorials. XD</p>
+  and tutorials. XD
+  <br><br>
+  Regardless, creativity isn't reserved only for artists, it's a form of pure psychology shaped by our
+  environment, motivation, and other influences. I believe everyone is expressive and imaginative in their own 
+  way. Even our mistakes can be seen as a form of creativity & that's why it's not a privilege, but something 
+  everyone can learn! :)</p>
   <div id="gallery-images"></div>
 </div>
 
@@ -608,7 +609,7 @@ const galleryData = {
     "art/25.png", "art/26.png", "artarchive/oc/15_25.png", "artarchive/ynfg/7_25.png","artarchive/oc/16_25.gif", "artarchive/oc/18_25.png",
     "artarchive/umineko/1_25.png", "art/27.png", "artarchive/pixel/2025_unknown_2.gif",
     "artarchive/ynfg/8_25.png", "art/29.png", "art/30.png",
-    "artarchive/misc/1_25.png", "art/31.png", "artarchive/umineko/2_25.png", "artarchive/ynfg/12_25.png", 
+    "art/31.png", "artarchive/umineko/2_25.png", "artarchive/ynfg/12_25.png", 
     "artarchive/ynfg/11_25.png", "artarchive/ynfg/scrapped girl_25.png", "artarchive/pixel/2_25.png",
     "artarchive/forsaken/1_25.png",
     "artarchive/forsaken/4_25.png", "artarchive/forsaken/6_25.png", "artarchive/forsaken/9_25.png",
