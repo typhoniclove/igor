@@ -616,7 +616,7 @@ const galleryData = {
     "artarchive/misc/6_25.png", "artarchive/oc/21_25.png", "artarchive/oc/22_25.png", "artarchive/oc/23_25.png", 
     "artarchive/oc/24_25.png", "artarchive/pixel/1_25.gif", "art/32.png", "artarchive/forsaken/15_25.png",
     "artarchive/forsaken/16_25.png", "artarchive/misc/8_25.png", "artarchive/oc/25_25.png",
-    "artarchive/oc/26_25.png"]
+    "artarchive/oc/26_25.png", "artarchive/oc/27_25.png"]
 };
 
 function attachArtGalleryEvents() {
