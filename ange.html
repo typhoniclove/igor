@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Witch of Truth</title>
+  <link rel="stylesheet" href="styleange.css">
+</head>
+<body>
+  <div id="container">
+    <!-- LEFT SIDEBAR -->
+    <div id="left-box">
+      <ul>
+        <p>Extras</p>
+        <img src="angeshrine/portrait2.jpg" width="160" alt="Ange portrait">
+        <li onclick="loadPage('gallery')">Gallery</li>
+        <li onclick="loadPage('quotes')">Quotes</li>
+        <li onclick="loadPage('fanarts')">Fanarts</li>
+        <li onclick="loadPage('credits')">Credits</li>
+        <li><a href="index.html">Return to my site</a></li>
+      </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="middle-box">
+      <div id="main-content">
+      </div>
+    </div>
+
+  <!-- HIDDEN AUDIO ELEMENT -->
+  <audio id="bg-audio" controls style="display:none;"></audio>
+
+  <!-- FIXED BOTTOM-RIGHT PLAYER -->
+  <div id="bg-player" style="position: fixed; bottom: 10px; right: 10px; background: #300A2D; color: #FFDB94; padding: 10px; border-radius: 10px; z-index: 1000; width: 250px; transition: all 0.3s ease;">
+    <div style="display:flex; justify-content: space-between; align-items:center;">
+      <div>
+        <button onclick="prevTrack()">&#9664;</button>
+        <button onclick="bgAudio.play()">Play</button>
+        <button onclick="bgAudio.pause()">Pause</button>
+        <button onclick="nextTrack()">&#9654;</button>
+      </div>
+      <button onclick="toggleTrackList()">&#9776;</button> <!-- expand button -->
+    </div>
+
+    <span id="current-track" style="display:block; margin-top:5px;">None</span>
+
+  <div id="track-list" style="display:none; margin-top:10px; max-height:200px; overflow-y:auto;">
+    <h4><center>Episode 1: Legend of the Golden Witch</center></h4>
+    <p onclick="playTrack('angeshrine/soundtrack/1rose.mp3')" style="color: #ffefbf;">Rose</p>
+    <p onclick="playTrack('angeshrine/soundtrack/2sea.mp3')">Sea</p>
+    <p onclick="playTrack('angeshrine/soundtrack/3novelette.mp3')">Novelette</p>
+    <p onclick="playTrack('angeshrine/soundtrack/4hope.mp3')">Hope</p>
+    <p onclick="playTrack('angeshrine/soundtrack/5steadypace.mp3')">Steady Pace</p>
+    <p onclick="playTrack('angeshrine/soundtrack/6Fortitude.mp3')">Fortitude</p>
+    <p onclick="playTrack('angeshrine/soundtrack/7witchingold.mp3')">Witch In Gold</p>
+    <p onclick="playTrack('angeshrine/soundtrack/8fishyaroma.mp3')">Fishy Aroma</p>
+    <p onclick="playTrack('angeshrine/soundtrack/9path.mp3')">Path</p>
+    <p onclick="playTrack('angeshrine/soundtrack/10worldend.mp3')">Worldend</p>
+    <p onclick="playTrack('angeshrine/soundtrack/11voiceless.mp3')">Voiceless</p>
+    <p onclick="playTrack('angeshrine/soundtrack/12deadangle.mp3')" style="color: #ffefbf;">Dead Angle</p>
+
+    <h4><center>Episode 2: Turn of the Golden Witch</center></h4>
+    <p onclick="playTrack('angeshrine/soundtrack/13cage.mp3')" style="color: #ffefbf;">Cage</p>
+    <p onclick="playTrack('angeshrine/soundtrack/14goldensneer.mp3')">Golden Sneer</p>
+    <p onclick="playTrack('angeshrine/soundtrack/15melody.mp3')" style="color: #ffefbf;">Melody</p>
+    <p onclick="playTrack('angeshrine/soundtrack/16blacklilliana.mp3')">Black Lilliana</p>
+    <p onclick="playTrack('angeshrine/soundtrack/17overthesky.mp3')" style="color: #ffdd75;">Over The Sky</p>
+
+    <h4><center>Episode 3: Banquet of the Golden Witch</center></h4>
+    <p onclick="playTrack('angeshrine/soundtrack/18haruka.mp3')" style="color: #ffbf00">Haruka (Distant)</p>
+    <p onclick="playTrack('angeshrine/soundtrack/19psychorus.mp3')" style="color: #ffdd75;">Psy-Chorus</p>
+    <p onclick="playTrack('angeshrine/soundtrack/20far.mp3')">Far</p>
+    <p onclick="playTrack('angeshrine/soundtrack/21haze.mp3')">Haze</p>
+    <p onclick="playTrack('angeshrine/soundtrack/22happinessofmarionette.mp3')">Happiness Of Marionette</p>
+    <p onclick="playTrack('angeshrine/soundtrack/23meltingaway.mp3')" style="color: #ffdd75;">Melting Away</p>
+    <p onclick="playTrack('angeshrine/soundtrack/24soulofsoul.mp3')" style="color: #ffefbf;">Soul Of Soul</p>
+    <p onclick="playTrack('angeshrine/soundtrack/25thanksforbeingborn.mp3')">Thanks For Being Born</p>
+    <p onclick="playTrack('angeshrine/soundtrack/26wingless.mp3')" style="color: #ffefbf;">Wingless</p>
+
+    <h4><center>Episode 4: Alliance of the Golden Witch</center></h4>
+    <p onclick="playTrack('angeshrine/soundtrack/27monochromeclock.mp3')">Monochrome Clock</p>
+    <p onclick="playTrack('angeshrine/soundtrack/28apathy.mp3')" style="color: #ffefbf;">Apathy</p>
+    <p onclick="playTrack('angeshrine/soundtrack/29parallel.mp3')" style="color: #ffbf00">Parallel</p>
+    <p onclick="playTrack('angeshrine/soundtrack/30fstyle.mp3')">F Style</p>
+    <p onclick="playTrack('angeshrine/soundtrack/31happymaria.mp3')">Happy Maria! (Instrumental)</p>
+    <p onclick="playTrack('angeshrine/soundtrack/32dir.mp3')">Dir</p>
+
+    <h4><center>Episode 5: End of the Golden Witch</center></h4>
+    <p onclick="playTrack('angeshrine/soundtrack/33one.mp3')">One</p>
+    <p onclick="playTrack('angeshrine/soundtrack/34spiral.mp3')" style="color: #ffefbf;">Spiral</p>
+    <p onclick="playTrack('angeshrine/soundtrack/35prouddust.mp3')">Proud-Dust</p>
+    <p onclick="playTrack('angeshrine/soundtrack/36discolor.mp3')">Discolor</p>
+
+    <h4><center>Episode 6: Dawn of the Golden Witch</center></h4>
+    <p onclick="playTrack('angeshrine/soundtrack/37asinglemoment.mp3')" style="color: #ffefbf;">A Single Moment</p>
+    <p onclick="playTrack('angeshrine/soundtrack/38mydear.mp3')">My Dear</p>
+    <p onclick="playTrack('angeshrine/soundtrack/39loreley.mp3')">Loreley</p>
+
+    <h4><center>Episode 7: Requiem of the Golden Witch</center></h4>
+    <p onclick="playTrack('angeshrine/soundtrack/40le4octobre.mp3')" style="color: #ffefbf;">Le 4 Octobre</p>
+    <p onclick="playTrack('angeshrine/soundtrack/41l&dcirculation.mp3')" style="color: #ffdd75;">L&D Circulation</p>
+    <p onclick="playTrack('angeshrine/soundtrack/42-7weights.mp3')">7 weights</p>
+    <p onclick="playTrack('angeshrine/soundtrack/43fall.mp3')" style="color: #ffdd75;">Fall</p>
+    <p onclick="playTrack('angeshrine/soundtrack/44farflat.mp3')">Far (Flat)</p>
+    <p onclick="playTrack('angeshrine/soundtrack/45s-he-end.mp3')" style="color: #ffefbf;">S-He-End</p>
+
+    <h4><center>Episode 8: Twilight of the Golden Witch</center></h4>
+    <p onclick="playTrack('angeshrine/soundtrack/46encounse.mp3')">Encounse</p>
+  </div>
+</div>
+
+<audio id="bg-audio"></audio>
+
+    
+    <!-- RIGHT SIDEBAR -->
+    <div id="right-box">
+        <p>Navigation</p>
+        <img src="angeshrine/portrait.jpg" alt="Ange portrait">
+      <ul>
+        <li onclick="loadPage('home')">Home</li>
+        <li onclick="loadPage('ange')">Ange Ushiromiya</li>
+        <li onclick="loadPage('motives')">Her Motives</li>
+        <li onclick="loadPage('end')">The End</li>
+        <li onclick="loadPage('resolution')">Resolution</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="scriptange.js"></script>
+</body>
+</html>

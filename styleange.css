@@ -1,0 +1,326 @@
+body {
+  background-image: url("angeshrine/rosebg3.png");
+  background-size: cover;          /* fills entire body */
+  background-position: center;     /* centers image */
+  background-repeat: no-repeat;    /* no tiling */
+  background-attachment: fixed;    /* stays fixed and covers full scroll */
+  
+  color: #eee;
+  font-family: "Georgia", serif;
+  margin: 0;
+  min-height: 100vh;               /* ensures body is at least full viewport height */
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* <-- this makes boxes stick to the top */
+  height: 100vh;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* left and right boxes */
+#left-box, #right-box {
+  width: 15%;
+  background-color: #300A2D;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+#middle-box {
+  width: 50%; /* try 40%, 50%, or 60% depending on what looks best */
+  background-color: #300A2D;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  overflow-y: auto;
+  text-align: center;
+}
+
+/* move side boxes a little closer */
+#left-box {
+  margin-right: -10px;
+}
+
+#right-box {
+  margin-left: -10px;
+}
+
+/* lists */
+#left-box ul, #right-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#left-box li, #right-box li {
+  margin: 10px 0;
+  cursor: pointer;
+  transition: color 0s;
+}
+
+#left-box li:hover, #right-box li:hover {
+  color: #FFDB94;
+}
+
+/* links */
+a {
+  color: #FFDB94;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#left-box, #right-box {
+  width: 15%;
+  height: 55vh;
+  background-color: #300A2D;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  text-align: center;
+  /* remove margin-top here */
+}
+
+#left-box, #right-box, #middle-box {
+  box-shadow: 0 0 4px #D9C768; /* horizontal 0, vertical 0, blur 4px, color */
+}
+
+h1 {
+    color: #FFDB94;
+}
+
+
+
+/* === Gallery Container === */
+#manga-gallery {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;       /* horizontal scroll if too many images */
+  padding: 15px 10px;
+  scroll-behavior: smooth;
+  border: 1px solid rgba(255, 219, 148, 0.3);
+  border-radius: 10px;
+  background: rgba(30, 20, 10, 0.3);
+  box-shadow: 0 0 20px rgba(255, 219, 148, 0.1);
+}
+
+/* Scrollbar styling */
+#manga-gallery::-webkit-scrollbar {
+  height: 8px;
+}
+#manga-gallery::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+#manga-gallery::-webkit-scrollbar-thumb {
+  background: rgba(255, 219, 148, 0.5);
+  border-radius: 10px;
+}
+#manga-gallery::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 219, 148, 0.8);
+}
+
+/* === Images === */
+#manga-gallery img {
+  height: 160px; /* small preview, but not uniform height */
+  width: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0s ease, box-shadow 0s ease;
+  box-shadow: 0 0 10px rgba(255, 219, 148, 0.2);
+}
+
+#manga-gallery img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 20px rgba(255, 219, 148, 0.4);
+}
+
+/* === Section Titles === */
+h1, h2, h4 {
+  text-align: center;
+  color: #FFDB94;
+  text-shadow: 0 0 8px rgba(255, 219, 148, 0.5);
+}
+
+p {
+  text-align: center;
+  color: #ffffff;
+}
+
+/* === Lightbox Overlay === */
+#lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0s ease;
+}
+
+#lightbox img {
+  max-width: 95%;
+  max-height: 95%;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(255, 219, 148, 0.4);
+}
+
+#close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 40px;
+  color: #FFDB94;
+  cursor: pointer;
+  transition: transform 0s ease, color 0s ease;
+}
+#close:hover {
+  transform: scale(1.2);
+  color: #fff4e0;
+}
+
+/* Fade animation for the lightbox */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+
+/* === Fanarts Container === */
+#fanarts-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid rgba(255, 219, 148, 0.3);
+  border-radius: 10px;
+  background: rgba(30, 20, 10, 0.3);
+  box-shadow: 0 0 20px rgba(255, 219, 148, 0.1);
+}
+
+/* === Fanart Images (natural proportions preserved) === */
+#fanarts-gallery img {
+  max-width: 130px; /* prevents overly large images */
+  height: auto;      /* keeps natural height */
+  border-radius: 8px;
+  cursor: pointer;
+  object-fit: contain; /* ensures full image shows without cropping */
+  transition: transform 0s ease, box-shadow 0s ease;
+  box-shadow: 0 0 10px rgba(255, 219, 148, 0.2);
+}
+
+#fanarts-gallery img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 20px rgba(255, 219, 148, 0.4);
+}
+
+/* === Titles & Text === */
+#fanarts h2 {
+  text-align: center;
+  color: #FFDB94;
+  text-shadow: 0 0 8px rgba(255, 219, 148, 0.5);
+  margin-bottom: 10px;
+}
+
+#fanarts p {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* === Lightbox Overlay === */
+#fanart-lightbox {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  animation: fadeIn 0 ease;
+}
+
+#fanart-lightbox img {
+  width: auto;
+  height: auto;
+  max-width: 95vw;
+  max-height: 95vh;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(255, 219, 148, 0.4);
+}
+
+#fanart-close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 40px;
+  color: #FFDB94;
+  cursor: pointer;
+  transition: transform 0s ease, color 0.2s ease;
+}
+
+#fanart-close:hover {
+  transform: scale(1.2);
+  color: #fff4e0;
+}
+
+/* Lightbox fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+.episode {
+  background-color: #300A2D;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 5px #D9C768;
+}
+
+.episode-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: #FFDB94;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.episode-header:hover {
+  color: #fff;
+}
+
+.arrow {
+  font-size: 1.2em;
+  transition: transform 0s;
+}
+
+.episode-tracks {
+  display: none;
+  margin-top: 10px;
+}
+
+audio {
+  width: 100%;
+  outline: none;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+
