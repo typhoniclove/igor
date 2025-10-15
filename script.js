@@ -329,17 +329,26 @@ and many other cool things stored within here!</p>
     </div>
   `,
   shrines: `
-   <div class="shr column center">
-      <h2>Shrines</h2>
-      <img src="site/divider2.gif" alt="Divider" width="300px">
-      <br>
-      <p>So... this is awkward...<br>
-      There's nothing here yet! Check back again later?
-      <br>
-      <br>
-      <br>
-      <h2><span class="back-btn" onclick="goBack()">Go back</span></h2>
+    <div class="shr column left">
+    <div class="shr-nav-box box">
+      <br><br><br><br><br><br><br>
+      <h2>Navigation</h2>
+      <a href="#" class="nav-link" data-page="home">Home</a>
+      <a href="#" class="nav-link" data-page="interests">Interests</a>
+      <a href="#" class="nav-link" data-page="shrines">Shrines</a>
+      <a href="#" class="nav-link" data-page="art">Art</a>
+      <a href="#" class="nav-link" data-page="blog">Blog</a>
+      <a href="#" class="nav-link" data-page="friends">Friends</a>
+      <a href="#" class="nav-link" data-page="extras">Extras</a>
     </div>
+  </div>
+
+  <div class="shr column right">
+   <h2>Shrines</h2>
+      <center><img src="site/divider2.gif" alt="Divider" width="350px">
+      <p><a href="ange.html">The Witch of Truth - Ange Ushiromiya</a>
+      <br>Contains spoilers for Umineko When They Cry</p></center>
+  </div>
   `,
     art: `
     <!-- Left column (Navigation + Bottom Box) -->
@@ -568,7 +577,7 @@ function attachNavEvents() {
       if (pages[page]) {
         mainContent.innerHTML = pages[page];
         attachNavEvents(); 
-        if (page === "art") attachArtGalleryEvents(); // 👈 added this
+        if (page === "art") attachArtGalleryEvents(); // added this
       }
     });
   });
@@ -585,7 +594,6 @@ function goBack() {
 }
 
 
-// Map each year to the images you have in the "art" folder
 const galleryData = {
   "2020": ["art/1.png", "art/2.png", "art/3.png"],
   "2021": ["art/4.jpg", "art/5.png", "art/6.png"],
@@ -616,7 +624,7 @@ const galleryData = {
     "artarchive/misc/6_25.png", "artarchive/oc/21_25.png", "artarchive/oc/22_25.png", "artarchive/oc/23_25.png", 
     "artarchive/oc/24_25.png", "artarchive/pixel/1_25.gif", "art/32.png", "artarchive/forsaken/15_25.png",
     "artarchive/forsaken/16_25.png", "artarchive/misc/8_25.png", "artarchive/oc/25_25.png",
-    "artarchive/oc/26_25.png", "artarchive/oc/27_25.png"]
+    "artarchive/oc/26_25.png"]
 };
 
 function attachArtGalleryEvents() {
@@ -634,7 +642,7 @@ function attachArtGalleryEvents() {
       images.forEach(src => {
         const img = document.createElement("img");
         img.src = src;
-        img.width = 200; // optional fixed size
+        img.width = 200;
         img.height = 200;
         img.style.display = "block";
         img.style.margin = "10px auto";
@@ -645,7 +653,7 @@ function attachArtGalleryEvents() {
 }
 
 
-// Handle image clicks for full-size view
+
 document.addEventListener("click", (e) => {
   if (e.target.matches("#gallery-images img")) {
     const lightbox = document.getElementById("lightbox");
@@ -654,7 +662,7 @@ document.addEventListener("click", (e) => {
     lightbox.style.display = "flex"; // show overlay
   }
 
-  // Close the lightbox if you click outside the image
+  // close the lightbox if you click outside the image
   if (e.target.id === "lightbox") {
     e.target.style.display = "none";
   }
@@ -670,7 +678,7 @@ function attachArtGalleryEvents() {
 
   buttons.forEach(btn => {
     btn.addEventListener("click", () => {
-      // Hide the <p> placeholder text
+      // hide the <p> placeholder text
       if (placeholderText) placeholderText.style.display = "none";
 
       const year = btn.getAttribute("data-year");
