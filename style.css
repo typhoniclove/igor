@@ -991,3 +991,76 @@ center {
   border: 3px solid #ED9D00;
   border-radius: 10px;
 }
+
+
+
+.shr.column.left {
+  width: 400px;     
+  height: 800px;      
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;          
+  box-sizing: border-box;
+}
+
+
+
+.shr.column.right {
+  width: 1050px;
+  height: 800px;
+  background-color: #ffffff;    
+  border-radius: 15px;
+  border: 3px dashed #ED9D00;
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+.shr.column.right h2,
+.shr.column.right img,
+.shr.column.right p {
+  margin: 0px 0; 
+  padding: 0;    
+}
+
+.shr.column.right p, 
+center {
+  color: #ad6200
+}
+
+
+.shr-nav-box {
+  width: 306px; 
+  background: #ffffff url('site/navigation background.png') center/cover no-repeat;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  padding: 5px;
+  box-sizing: border-box; 
+}
+
+.shr-nav-box h2 {
+  margin: 0;
+  padding-bottom: 5px; 
+  font-size: 40px;      
+  font-weight: 900;    
+}
+
+
+
+.shr a {
+  color: #0086d4;          
+  transition: color 0s ease; 
+}
+
+.shr a:hover {
+  color: #00c3ff;          
+}
