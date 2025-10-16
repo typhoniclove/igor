@@ -346,8 +346,12 @@ and many other cool things stored within here!</p>
   <div class="shr column right">
    <h2>Shrines</h2>
       <center><img src="site/divider2.gif" alt="Divider" width="350px">
+      <br>
       <p><a href="ange.html">The Witch of Truth - Ange Ushiromiya</a>
-      <br>Contains spoilers for Umineko When They Cry</p></center>
+      <br>Contains spoilers for Umineko When They Cry</p>
+      <br><br> 
+      <p><a href="psy.html">My college study notes</a>
+      <br>Doesn't support the English language</p></center>
   </div>
   `,
     art: `
@@ -434,6 +438,10 @@ blog: `
   <div class="blo column right">
     <h2>Blog</h2>
     <img src="site/divider2.gif" alt="Divider" width="300px">
+    <p><b>10/16/2025</b> - So I'm writing this halfway through my 2nd week of college, but I just wanted to say that my first week was pretty good! All of the subjects were quite interesting (except biological psychology XD), and I love all of my professors! But I noticed that I struggle a lot with paying attention to my professors, especially with other students making distracting sounds, even if they're minimal. This made me take matters into my own hands and make a site in my shrines section where I'll write down notes from my lessons. :D</p>
+    <p>Taking physical notes with my pen makes my arm hurt easily, and with my computer being so messy, it would be impossible to organize stuff on it, so this would be the most efficient and beneficial way for me to study! Sadly, the notes won't be in English, but I wouldn't recommend you studying off my notes anyways. XD I just thought I'd put it out there for anyone in need.</p>
+    <p>Besides that, I've also made another shrine for my favorite character in the visual novel series called Umineko When They Cry! You should check it out if you're interested in that, but besides that, that's pretty much all I've done.</p>
+    <br><center>----------------------------------------------------------------------------------------------------------------------------</center><br>
     <p><b>10/7/2025</b> - I've finally finished the revamp of my website and I'm SO happy with how it turned 
     out! But stiching and gluing all of this together with my rusty coding skills was a pain in the ass!
     I spent working on this for a whole week multiple hours per day, and I'm still not 100% finished with it... 
@@ -577,7 +585,7 @@ function attachNavEvents() {
       if (pages[page]) {
         mainContent.innerHTML = pages[page];
         attachNavEvents(); 
-        if (page === "art") attachArtGalleryEvents(); // added this
+        if (page === "art") attachArtGalleryEvents(); // 👈 added this
       }
     });
   });
@@ -594,6 +602,7 @@ function goBack() {
 }
 
 
+// Map each year to the images you have in the "art" folder
 const galleryData = {
   "2020": ["art/1.png", "art/2.png", "art/3.png"],
   "2021": ["art/4.jpg", "art/5.png", "art/6.png"],
@@ -642,7 +651,7 @@ function attachArtGalleryEvents() {
       images.forEach(src => {
         const img = document.createElement("img");
         img.src = src;
-        img.width = 200;
+        img.width = 200; // optional fixed size
         img.height = 200;
         img.style.display = "block";
         img.style.margin = "10px auto";
@@ -653,7 +662,7 @@ function attachArtGalleryEvents() {
 }
 
 
-
+// Handle image clicks for full-size view
 document.addEventListener("click", (e) => {
   if (e.target.matches("#gallery-images img")) {
     const lightbox = document.getElementById("lightbox");
@@ -662,7 +671,7 @@ document.addEventListener("click", (e) => {
     lightbox.style.display = "flex"; // show overlay
   }
 
-  // close the lightbox if you click outside the image
+  // Close the lightbox if you click outside the image
   if (e.target.id === "lightbox") {
     e.target.style.display = "none";
   }
@@ -678,7 +687,7 @@ function attachArtGalleryEvents() {
 
   buttons.forEach(btn => {
     btn.addEventListener("click", () => {
-      // hide the <p> placeholder text
+      // Hide the <p> placeholder text
       if (placeholderText) placeholderText.style.display = "none";
 
       const year = btn.getAttribute("data-year");
