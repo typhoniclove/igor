@@ -161,6 +161,8 @@ const pages = {
       <div class="updates-box box">
         <h2>Updates</h2>
     <br>
+    <p><b>10/16/2025</b> - Added a new shrine for my college notes + Updated my blog</p>
+    <p><b>10/14/2025</b> - Added a new shrine for Umineko When They Cry</p>
     <p><b>10/8/2025</b> - Completely revamped my website + Added a WHOLE bunch of new sections and content</p>
     <p><b>5/22/2025</b> - Switched to GitHub</p>
     <p><b>4/30/2025</b>  - Changed the layout + Updated the theme (AGAIN)</p>
