@@ -76,14 +76,27 @@ body {
 }
 
 .lesson-content {
-  max-height: 0;
-  overflow: hidden;
+  display: none;
   padding: 0 15px;
   background-color: #fff;
-  transition: max-height 0s ease, padding 0s ease;
 }
 
 .lesson-content.open {
-  max-height: 300px; /* You can adjust if your lessons are longer */
+  display: block;
   padding: 15px;
+}
+
+
+
+
+/* make bold text inside psihologija lessons orange */
+.lesson-content.psihologija b {
+  color: #008cdd;
+}
+
+.lesson-content.psihologija u {
+  color: inherit; /* keep the text the same color as the rest */
+  text-decoration: underline;
+  text-decoration-color: #008cdd; /* color only the underline */
+  text-decoration-thickness: 3px;
 }
