@@ -100,3 +100,16 @@ body {
   text-decoration-color: #008cdd; /* color only the underline */
   text-decoration-thickness: 3px;
 }
+
+
+
+.lesson-content.kreativnost b {
+  color: #bb7000 !important;
+}
+
+.lesson-content.kreativnost u {
+  color: inherit; 
+  text-decoration: underline;
+  text-decoration-color: #bb7000; 
+  text-decoration-thickness: 3px;
+}
