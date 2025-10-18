@@ -234,7 +234,7 @@ bioloskalekcija: `
   <h1>Biološka psihologija</h1>
   <div class="lesson">
     <div class="lesson-header" onclick="toggleLesson(this)">
-      <span>Lesson 1 - Uvod u biološku psihologiju</span>
+      <span>I PREDAVANJE - Uvod u biološku psihologiju</span>
       <span class="arrow">▼</span>
     </div>
     <div class="lesson-content">
@@ -247,7 +247,7 @@ kognitivnalekcija: `
 
   <div class="lesson">
     <div class="lesson-header" onclick="toggleLesson(this)">
-      <span>Lesson 1 - Uvod u kognitivnu psihologiju</span>
+      <span>I PREDAVANJE - Uvod u kognitivnu psihologiju</span>
       <span class="arrow">▼</span>
     </div>
     <div class="lesson-content">
@@ -259,11 +259,215 @@ kognitivnalekcija: `
     <h1>Kreativnost i psihologija</h1>
     <div class="lesson">
     <div class="lesson-header" onclick="toggleLesson(this)">
-      <span>Lesson 1 - Uvod u kreativnu psihologiju</span>
+      <span>I PREDAVANJE: Uvod u kreativnu psihologiju</span>
       <span class="arrow">▼</span>
     </div>
-    <div class="lesson-content">
-      <p>Placeholder text</p>
+    <div class="lesson-content kreativnost">
+    <h3>Kada ste poslednji put bili kreativni?</h3>
+      <p>- Pitanje traži da se setimo trenutka kada smo nešto uradili na nov, originalan način. Ne nužno umetnički, već bilo kakav izraz naše maštovitosti ili snalažljivosti.
+      <br><br>
+      Na primer:
+      <br><br>
+      - <b>Albert Ajnštajn</b> - Dobio je kompas, i zapitao se zašto igla uvek pokazuje na sever, iako je ništa ne dodiruje. To ga je toliko zaintrigiralo da je počeo da razmišlja o nevidljivim silama u prirodi, što je kasnije dovelo do njegovih naučnih otkrića.
+      <br><br>
+      - <b>Frida Kalo</b> - Nakon teške saobraćajne nesreće, bila je dugo prikovana za krevet, ali je tada počela da slika portrete sebe, zbog ogledala ispred nje, ali takođe i ono što je osećala.
+      <br><br>
+      - <b>Mihajl Čiksentmihajlji</b> - On je proučavao kreativnost i stanje "toka" (flow), to je ono kada si potpuno uronjen u neku aktivnost, zaboraviš na vreme, umor i sve oko sebe jer si u potpunosti fokusiran na ono što radiš.</p>
+      <hr>
+      <h3><i>Šta je kreativnost?</i></h3>
+      <p>- <b>Kreativnost</b> je sposobnost da se <u>proizvedu</u> ideje, rešenja ili proizvodi koji su <u>istovremeno originalni i korisni</u>.
+      <br>
+      - Kreativnost <u>nije samo nešto novo</u>, već nešto novo što <u>ima smisla u određenom kontekstu</u>.
+      <br><br>
+      - <b>Originalnost</b> = Novina, neponovljivost, iznenađujuće rešenje...<br>
+      - <b>Korisnost</b> = Primenljivost, funkcionalnost, relevantnost za situaciju...</p>
+      <hr>
+      <h3><i>Šta <u>nije</u> kreativnost?</i></h3>
+      <p>- Nije isto što i <b>intelegencija</b>. Ljudi sa prosešnim IQ-om mogu biti vrlo kreativni i obrnuto.<br>
+      - Nije <b>nepredvidiva genijalnost</b> rezervisana samo za umetnike ili "<i>lude naučnike</i>".<br>
+      - Nije samo stvar <b>talenta</b>, već i <b>navike, procesa i vežbanja</b>.<br>
+      - Nije uvek uočljiva ili velika. Može biti i u malim svakodnevnim stvarima. (<u>Mikrokreativnost</u>)
+      <hr>
+      <h3><b>Kreativnost nije dar za izabrane</b></h3>
+      Kreativnost je <b>kognitivna, emocionalna i socijalna</b> sposobnost koju <u>svi</u> posedujemo i razvijamo.
+      <hr>
+      <h3>Psihološke definicije kreativnosti</h3>
+      Standardna definicija kreativnosti / Runco i Jaeger (2012):<br>
+      "<i><b>Kreativnost zahteva i originalnost i korisnost.</b></i>"
+      <br><br>
+      - Autori objedinjuju različite pristupe kreativnosti u jednu operativnu definiciju.
+      <br><br>
+      - <b>Originalnost</b> = Nova ideja koja se razlikuje od uobičajenih rešenja.<br>
+      - <b>Korisnost (Adekvatnost)</b> = Ideja mora biti upotrebljiva, odgovarajuća kontekstu
+      <br><br>
+      - Definicja daje jasne kriterijume - može se proceniti da li je ideja nova i da li rešava neki problem. 
+      <hr>
+      <h3>Teorija investiranja u kreativnost</h3>
+      "<b>Kreativni ljudi kupuju niske ideje i prodaju ih visoko.</b>"
+      (<i>Investment theory of creativity</i>)
+      <br><br>
+      Ova metafora dolazi iz sveta ekonomije i opisuje kreativne ljudi kao one koji:
+      <br><br>
+      - Vide <b>potencijal u ideji</b> koja trenutno nije <u>popularna ili prihvaćena</u>.<br>
+      - <b>Ulažu trud</b> da tu ideju razviju, prodaju je, učine je važnom.<br>
+      - <b>Suprotstavljaju se konvenciji</b>, jer veruju u vrednost svoje ideje iako ona još nije prepoznata.
+      <hr>
+      Kreativnost se javlja na preseku šest faktora:<br><br>
+      <b>1. Intelektualne sposobnosti</b> (Analitičko, sintetičko i praktično mišljenje.)<br>
+      <b>2. Znanje</b> (Neophodna osnova, ali ne previše da bi se izbegao konformizam.)<br>
+      <b>3. Stil mišljenja</b> (Preferencija za originalnost i samostalno razmišljanje.)<br>
+      <b>4. Lične karakteristike</b> (Otvorenost, hrabrost, ustrajnost.)<br>
+      <b>5. Motivacija</b> (Najčešće unutrašnja.)<br>
+      <b>6. Okruženje</b> (Podsticajno ili sputavajuće.) <br>
+      
+      <br><br>Ova teorija je ne vidi kreativnost isključivo kao ličnu osobinu, već kao <u>interakciju sposobnosti, ličnosti i konteksta</u>. Naglašava ulogu izbora, rizika i truda.
+      <br><br>
+      Dakle:<br>
+      - Sposobnosti -> Koliko znaš i umeš da razmišljaš;<br>
+      - Ličnost -> Koliko si otvoren, hrabar, uporan;<br>
+      - Kontekst -> Da li te okruženje podržava ili sputava.<br>
+      <hr>
+      <h3>Ključne karakteristike kreativnosti</h3>
+      <b>1. Divergentno mišljenje</b><br><br>
+       - Generisanje <u>više mogućih rešenja</u> za jedan problem.<br>
+       - Suprotno <u>konvergentnom mišljenju</u> (Gde postoji jedno tačno rešenje.)<br>
+       - Merenje kroz testove poput <u>Guilfordovog testa divergentnog mišljenja</u>.<br><br>
+
+       - Primer: Koliko različitih načina postoji da iskoristimo ciglu?<br> Razmisli na trenutak, van okvira.
+       <br><br>
+       Moji odgovori: Kao stolicu, blokada u mislima, držac za knjigu, obojiti je i koristiti kao dekoraciju. :D
+       <hr>
+      <b>2. Fleksibilnost</b><br>
+      <br>- <u>Najvažnija karakteristika.</u> Sposobnost promene perspektive i prilagođavanja.<br>
+      - Oslobađanje od rigidnog, linearnog razmišljanja.<br><br>
+      Šta ovo znači? Kad ne zapneš za jedno rešenje, već umeš da promeniš pristup.
+      <br><br>
+      - Primer: Ako te neko pita "<i>Kako možeš iskoristiti ciglu?</i>", neko će reći "<i>da sagradiš zid</i>", 
+      ali <u>fleksibilna</u> osoba će reći "<i>kao držač za vrata</i>", "<i>kao uteg</i>"...
+      <br><br>
+      - Drugi primer: Kad ne možemo da nađemo običan ključ, koristimo šrafciger ili novčić.
+      <hr>
+      <b>3. Originalnost</b><br><br>
+       - Proizvodi koje niko (ili gotovo niko) drugi ne bi smislio.<br>
+       - Može biti radikalna (Potpuno nova) ili inkrementalna (Nadogradnja).<br>
+       - Često merena statističkom retkoćom odgovora u testovima.
+      <hr>
+      <b>4. Spontanost i igra</b><br><br>
+      - Mnogi kreativni procesi počinju kroz <u>eksperimentisanje bez cilja</u>.<br>
+      - Igra i radoznalost omogućavaju "lutanje" koje vodi do uvida.<br><br>
+      - <u>Igra sa rečima može dovesti do pesme ili slogana</u>
+      <hr>
+      Kreativnost nije mistična ili rezervisana samo za umetnost, ona je psihološki proces koji uključuje:<br>
+      - Stvaranje nečeg novog (<u>Originalnost</u>),<br>
+      - Što ima vrednost u datom kontekstu (<u>Korisnost</u>),<br>
+      - Oslanja se na misaone veštine (<u>Divergencija, fleksibilnost</u>),<br>
+      - Oblikuje se <u>kroz motivaciju</u>, znanje i okruženje.
+      <hr>
+      <h3><i>Može li greška biti kreativna?</i></h3>
+      - <b>Može.</b> U kreativnosti, greške često vode do novih ideja.<br>
+      - Kada nešto pogrešiš, možeš otkriti nešto neočekivano što bi inače propustio.<br>
+      - Neke od najpoznatijih inovacija nastale su "greškom".
+
+      <h3><i>Da li nešto može biti kreativno ako nije korisno?</i></h3>
+
+      - <b>Može.</b> Kreativnost nije uvek praktična ili korisna.<br>
+      - Bitno je da ideja, izraz ili delo budu originalni i novi, čak i ako nisu upotrebljivi, jer pokazuju <u>jedinstveno razmišljanje ili neuobičajen pristup</u>.
+
+      <h3><i>Da li je kreativnost urođena ili naučena?</i></h3>
+      - Kreativnost je <b>narođena, nije privilegija.</b><br>
+      - Ali ako gledamo logički, ona može biti oba; neki ljudi prosto imaju neke prirodne talente, ali kreativnost se jača i oblikuje kroz iskustvo i učenje. 
+      <hr>
+      Kreativnost nije privilegija umetnika ili naučnika, ona je prisutna u <b>svima nama, svakog dana,</b> kada:<br><br>
+      - Prelazimo prepreke,<br>
+      - Razmišljamo van okvira,<br>
+      - Igramo se s idejama,<br>
+      - Kombinujemo poznato na nov način.<br>
+      <hr>
+      <h3>Kreativnost u nauci</h3>
+      - Kreativnost u nauci često se manifestuje kroz <b>intuitivne uvide</b>, stvaranje <b>novih modela</b>, otkrivanje <b>veza između naizgled nepovezanih pojava</b>, kao i kroz <b>alternativne načine rešavanja problema</b>.
+      <br><br>
+      - Znači: Imati <u>iznenadne ideje</u>, praviti nove <u>modele/teorije</u>, spajati stvari koje <u>na prvi pogled nemaju veze</u> i pronalaziti nove načine da se <u>reše problemi</u>.
+      <hr>
+      <h3>Albert Ajnštajn</h3>
+      - Kada je imao samo 16 godina, Albert Ajnštajn je sebi postavio jedno naizgled detinje, ali genijalno pitanje:<br><br>
+      "<i>Šta bi se desilo kada bih mogao da jašem na zraku svetlosti?</i>"<br><br>
+      - Umesto da uči fiziku iz knjiga, on je zamišljao <b>kao umetnik</b>, <u>ne kao matematičar</u>.<br>
+      - U svojoj mašti video je sebe kako putuje kroz prostor paralelno sa zrakom svetlosti.<br>
+      - Ako se kreće jednako brzo kao svetlost, pitao se, <b>da li bi svetlost oko njega "<i>zastala</i>"?</b><br>
+      - Da li bi i dalje video talase svetlosti ili bi sve postalo zamrznuto?<br>
+      - To pitanje, koje je počelo kao misaoni eksperiment, <b>postalo je osnova za Teoriju relativiteta</b> mnogo godina kasnije.
+      <hr>
+      <h3>Najpoznatije Ajnštajnove rečenice o kreativnosti</h3>
+      "<i>Mašta je važnija od znanja. Znanje nam kaže šta jeste, a mašta pokazuje šta može biti.</i>"
+       <br><br>
+       "<i>Logika te vodi od tačke A do tačke B. Mašta te vodi svuda.</i>"
+       <br><br>
+       "<i>Ne mogu da učim ničega iz knjiga ako u glavi ne mogu da zamislim sliku onoga što učim.</i>"
+       <h3>Kreativnost u umetnosti</h3>
+       - Umetnost je tradicionalno povezivana sa kreativnošću, ali čak i u umetnosti, kreativnost ne znači samo "stvarati lepo" već <b>razmišljati drugačije, pomerati granice, izražavati ono što se teško izgovara</b>.
+       <hr>
+       <h3>Pablo Pikaso</h3>
+       
+       - Kada je imao samo devet godina, Pablo Pikaso je naslikao <a href="https://www.pablo-ruiz-picasso.net/images/works/261.jpg" target="_blank">Picador</a>, sliku toreadora na konju.<br>
+       - Učitelji i roditelji su bili zapanjeni - dete je slikalo kao odrasli umetnik.<br>
+       - Do svoje četrnaeste, Pikaso je vladao tehnikom realizma (senke, proporcije, anatomija), sve je bilo savršeno.<br>
+       - Mogao je da naslika bilo šta i da to izgleda kao fotografija.<br>
+       - Ali onda, neočekivano, <b>odustao je od savršenstva</b>.<br>
+       - Počeo je da se "razgrađuje, da crta lica sa dva oka na istoj strani, ruke kao trouglove, svet iznutra, a ne spolja."<br>
+       - Ljudi su se čudili, pitali su se zašto bi neko ko zna da slika kao majstor hteo da slika kao dete?<br><br>
+       
+       - "<i>Zato što da naučim da slikam kao Rafael trebalo mi je četiri godine, a ceo život da naučim da slikam kao dete</i>", govorio je.</h3>
+       <hr>
+       <h3>Tri poruke od Pikasa</h3>
+        1. Kreativnost počinje kad se oslobodiš straha.<br>
+        "<i>Inspiracija postoji, ali mora da te zatekne dok radiš."</i>
+        <br><br>
+        2. Greška je deo puta.<br>
+        "<i>Akcija je osnova svakog uspeha. Počni i vidi gde te vodi."</i>
+        <br><br>
+        3. Umetnik vidi svet onakav kakav još ne postoji.<br>
+        "<i>Svrha umetnosti je da opere prašinu svakodnevnog života s naših duša."</i>
+        <hr>
+        <h3>The Artist Is Present (MoMA) - Marina Abramovič</h3>
+        <img src="https://www.moma.org/d/assets/W1siZiIsIjIwMTgvMTAvMzEvODJjNmRpcGExYl80MjY3OC5qcGciXSxbInAiLCJjb252ZXJ0IiwiLXF1YWxpdHkgOTAgLXJlc2l6ZSAyMDAweDIwMDBcdTAwM2UiXV0/42678.jpg?sha=f3a08b032397d6f6" width="500" />
+        <br><br>
+        - Marina je na stolicu u muzeju i <b>gledala ljude u oči</b>. Bez reči, bez dodira, samo prisustvo. <br>
+        - Tri meseca, sedam sati dnevno, preko hiljadu ljudi.<br><br>
+
+        - Ljudi su plakali. Neki su se smejali, drugi su se tresli. Jedan od njih bio je Ulay - njen bivši partner iz mladosti, čovek s kojim je nekad radila performanse o ljubavi i rastanku. 
+        Kad su se njih dvoje pogledali - <u>nije bilo reči, samo suze</u>. Ta scena je obišla svet.<br><br>
+        
+        - To je bio trenutak u kom je Marina pokazala da <b>prisustvo, pažnja i ranjivost mogu biti moćniji od bilo kog spektakla</b>.
+        <hr>
+        <h3>Poruke koje iz nje možemo poneti</h3>
+        1. Kreativnost traži ranjivost. <br>
+        Umetnik mora da se otvori, ne da bi bio voljen, nego da bi bio stvaran.
+        <br><br>
+        2. Prisutnost je umetnost.<br>
+        Biti tu ponekad je najveći čin stvaranja.
+        <br><br>
+        3. Kreativnost nije inspiracija, to je disciplina.<br>
+        "<i>Inspiracija dolazi samo ako joj napraviš prostor. Tišina je moja laboratorija.</i>"
+        <hr>
+        <h3>Kreativnost u svakodnevnom ŽIVOTU</h3>
+        - Najčešće zanemarena, ali izuzetno važna <b>kreativnost u svakodnevici</b> je fleksibilnost, snalažljivost i sposobnost da improvizujemo, prilagodimo i pronađemo nova rešenja u poznatim okolnostima.
+        <br><br>
+        - <b>Life hacks</b> - Neobična, ali efikasna rešenja (koristiti štipaljku da drži ekser dok ga zakucavaš)<br>
+        - <b>Roditeljstvo</b> - Kako smiriti dete bez svađe.<br>
+        - <b>Kuvanje bez recepta</b> - Pravljenje jela od onoga što imaš u frižideru.<br>
+        - <b>Snalaženje</b> u putovanju - Rešavanje problema u hodu, improvizacija.
+        <br><br>
+        - Kreativnost je sposobnost da od poznatog sveta napravimo <b>nepoznato</b>, da ono što svi vide <b>povežemo na način na koji niko ranije nije povezao</b> i tako u stvarnost unesemo trag svoje <b>jedinstvenosti</b>.
+        <br><br>
+        Pikasov život je priča o tome da se kreativnost ne uči iz knjiga, već iz hrabrosti da budeš drugačiji.
+        <br><br>
+        Nije poštovao  "<i>pravila umetnosti</i>", on ih je stalno iznova izmišljao.
+        <br><br>
+        Danas ga pamtimo ne kao slikara, nego kao <b>simbol slobode</b> - slobode da <u>pogrešimo</u>, da <u>eksperimentišemo</u>, da <u>svet vidimo drugačije</u> i da u tome <u>pronađemo sebe</u>.
+        <hr>
+      <h2>Excellent!</h2>
+      <img src="https://file.garden/Z7_GXKMzaAXvDQIE/Jade.gif" width="100">
+      </p>
     </div>
   </div>
   `,
