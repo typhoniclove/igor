@@ -161,7 +161,7 @@ const pages = {
       <div class="updates-box box">
         <h2>Updates</h2>
     <br>
-    <p><b>10/18/2025</b> - Added new stuff to my college notes</p>
+    <p><b>10/18/2025</b> - Added new stuff to my college notes + New drawing! :D</p>
     <p><b>10/16/2025</b> - Created a new shrine for my college notes + Updated my blog</p>
     <p><b>10/14/2025</b> - Created a new shrine for Umineko When They Cry</p>
     <p><b>10/8/2025</b> - Completely revamped my website + Added a WHOLE bunch of new sections and content</p>
@@ -636,7 +636,7 @@ const galleryData = {
     "artarchive/misc/6_25.png", "artarchive/oc/21_25.png", "artarchive/oc/22_25.png", "artarchive/oc/23_25.png", 
     "artarchive/oc/24_25.png", "artarchive/pixel/1_25.gif", "art/32.png", "artarchive/forsaken/15_25.png",
     "artarchive/forsaken/16_25.png", "artarchive/misc/8_25.png", "artarchive/oc/25_25.png",
-    "artarchive/oc/26_25.png"]
+    "artarchive/oc/26_25.png", "artarchive/oc/27_25.png" ]
 };
 
 function attachArtGalleryEvents() {
